@@ -6,7 +6,7 @@
 用新版 Chrome / Edge 直接打开 index.html，无需联网。Three.js、样式和程序化图形均在本地包中。若本地文件受设备策略限制，在项目目录运行 `python -m http.server 8766 --bind 127.0.0.1`，访问 http://127.0.0.1:8766/ 。三维部分要求 WebGL 2。
 
 ## 六个导航
-- 00 崛起前夜：六幕历史可拖动，从黑白逐渐进入彩色；解释规则、学习、数据与算力的因果联系。
+- 00 崛起前夜：1943—2016六章完整历史，包含20个关键事件。每章呈现问题、方法、能力边界与下一阶段的转折；章节联动四种可旋转、拆解的原理展品，叙事从黑白逐渐进入彩色。
 - 01 世纪对局：十九路示意棋盘与可旋转、点击、拆解的计算机架；五局历史讲解与4比1结果。
 - 02 决策之核：策略网络、价值网络和树搜索；选择、扩展、评估、回传四阶段单步与循环，查看先验、访问统计与均值。
 - 03 维度解剖：保留原十三阶段亚历克斯网络及其数据流、暂停、单步、展开、聚焦和局部计算。另加图像与棋盘简化平面切换、切片选择和平面分离。
@@ -32,9 +32,19 @@
 - assets/app.mjs、rendering.mjs、content.mjs、science.mjs、network.mjs：原网络及局部计算。
 
 ## 验证
-19项纯逻辑测试；tests/museum-browser.cjs 六区验收、tests/navigation-browser.cjs 全六关与状态回归、tests/browser.cjs 原模型功能回归。脚本使用本机 Playwright 路径，其他电脑需调整。
+22项纯逻辑测试；tests/museum-browser.cjs 六区验收、tests/navigation-browser.cjs 全六关与状态回归、tests/browser.cjs 原模型功能回归。脚本使用本机 Playwright 路径，其他电脑需调整。
 output/museum-qa.json、navigation-qa.json、professional-qa.json记录实测。截图与依赖不纳入Git。Edge软件渲染验证不等于真实手机性能测试，未现场验证用户学习效果。
 
 ## Git
-当前功能在 feature/alphago-museum 分支；此前 v1.0.0 和三导航提交仍可追溯。源码、依赖锁、测试、文档和离线 script.js 一起提交。未配置远程、未上传。
+当前策展升级在 feature/curated-history 分支；此前 v1.0.0 和三导航提交仍可追溯。源码、依赖锁、测试、文档和离线 script.js 一起提交。未配置远程、未上传。
 Three.js许可见 assets/THREE-LICENSE.txt。
+
+
+## 策展视觉与历史主展区升级
+- 新增 assets/history-data.mjs：六章、20个事件、各章研究来源；资料链接供读者核对，本次自动测试未验证所有外部站点可访问性。
+- 新增 assets/history-gallery.mjs：封面、策展导言、章节导航、四展品切换、全文与转折说明。所有历史正文直接可读，不需要播放动画解锁。
+- 新增 gallery.css：全站石墨黑、骨白、钛银与香槟金配色，计算区保留低饱和冷色。阅读对比度与移动端布局以截图复核。
+- 历史原理展品为人工神经元、规则推理机、搜索与评估装置、深度学习计算舱。四者不是历史实物的数字复刻，也不执行历史系统的真实算法。
+- 硬件加入圆角、固定件、电路走线、元件层次及风扇结构；环境反射与灯光经过调整。画布在展区复用，离开后暂停渲染。
+- tests/history.test.mjs 检查历史内容结构；tests/history-browser.cjs 检查章节、四模型、拆解、灰度联动及六区手机排版。最新记录 output/curated-qa.json；截图 curated-cover.png、curated-neuron.png、curated-rules.png、curated-search.png、curated-learning.png、curated-match.png、curated-gpu.png 与手机截图。
+- 四组浏览器验收共80个检查通过（19历史、23六区、21关卡、17原模型），均未记录页面错误。软件渲染不能代表实体GPU帧率；未进行实机手机性能或正式无障碍认证。
