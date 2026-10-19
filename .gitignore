@@ -1,0 +1,23 @@
+# Dependencies and generated QA artifacts
+node_modules/
+output/
+coverage/
+.playwright/
+.playwright-cli/
+test-results/
+playwright-report/
+
+# Local settings, credentials, and logs
+.env
+.env.*
+!.env.example
+*.log
+*.local
+.vscode/
+.idea/
+
+# OS and archive files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.zip
