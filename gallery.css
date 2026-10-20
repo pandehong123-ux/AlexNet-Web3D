@@ -7,3 +7,54 @@
 @media(max-width:760px){.mast{min-height:148px;margin-inline:4%}.main-nav a{font-size:11px;padding:11px 5px}.main-nav a span{font-size:8px}.curator-hero{padding-top:21px}.curator-line{font-size:8px;letter-spacing:1px;padding-bottom:14px;gap:12px}.curator-line span:last-child{font-size:9px}.curator-cover{display:block;padding:28px 0 20px;min-height:0}.folio{font-size:9px;letter-spacing:1px}.curator-cover h1{font-size:39px;line-height:1.4;letter-spacing:1px;margin:17px 0}.curator-cover p{font-size:12px;line-height:2.2}.curator-cover p br{display:none}.cover-actions{gap:17px;margin-top:23px}.cover-actions .solid-link{font-size:10px;padding:11px 13px}.cover-actions button{font-size:10px}.cover-seal{height:210px;margin:18px auto 0;max-width:280px}.cover-seal>span{font-size:60px}.cover-seal small{font-size:9px}.seal-ring{width:190px;height:190px}.cover-seal>i{font-size:7px;bottom:0}.history-thesis{display:block;padding:20px 0}.history-thesis>span:first-child{display:block;margin-bottom:12px;font-size:9px}.history-thesis p{font-size:12px;line-height:2.1}.chapter-rail{display:grid;grid-template-columns:repeat(3,1fr);margin:21px 0}.chapter-rail button{padding:13px 10px;border-bottom:1px solid #344036;min-height:88px}.chapter-rail button b{font-size:11px;margin:7px 0}.chapter-rail button small{font-size:7px}.object-topline{font-size:8px;padding:14px;letter-spacing:.5px}.object-layout{display:block}.history-scene{height:320px}.object-caption{left:14px;bottom:15px;gap:5px}.object-caption span{font-size:7px;max-width:260px}.object-caption small{font-size:8px}.object-inspector{padding:22px;border-left:0;border-top:1px solid #3f4c3c}.object-inspector h2{font-size:27px;margin:10px 0}.object-inspector>p{font-size:12px}.object-inspector ol{display:grid;grid-template-columns:1fr 1fr;gap:0 10px;margin:18px 0}.object-inspector li{font-size:11px;padding:12px 0}.object-inspector li span{margin-right:8px;font-size:8px}.object-selector{grid-template-columns:repeat(2,1fr)}.object-selector button{font-size:10px;padding:15px 9px;border-top:1px solid #364632}.object-selector button span{font-size:8px;margin-right:8px}.reading-control{flex-direction:column;align-items:stretch;gap:15px;padding:20px 0 25px}.reading-control>span:first-child{font-size:10px}.reading-control label{font-size:10px}.reading-control>span:last-child{font-size:8px}.history-chapter{padding:30px 0 25px}.history-chapter>header{grid-template-columns:45px 1fr;gap:14px;align-items:start}.chapter-num{font-size:38px;padding-top:14px;letter-spacing:-3px}.chapter-period{font-size:9px;letter-spacing:.5px}.history-chapter h2{font-size:22px;line-height:1.8;margin-top:5px}.history-chapter>header button{grid-column:2;text-align:left;width:max-content;font-size:10px}.chapter-grid{display:block;padding-left:0;margin-top:23px}.chapter-narrative>div{margin-bottom:23px}.chapter-narrative>div>span{font-size:9px}.chapter-narrative p{font-size:13px;line-height:2.1}.chapter-narrative .limit-note{padding:15px}.chapter-narrative .limit-note p{font-size:12px}.chapter-events{margin-top:25px;padding:0 0 0 19px}.chapter-events>div{margin-bottom:23px}.chapter-events>div:before{left:-22px}.chapter-events time{font-size:11px}.chapter-events h3{font-size:15px}.chapter-events p{font-size:12px;line-height:2}.chapter-transition{margin:23px 0 15px;padding-top:18px;display:block}.chapter-transition>span{display:block;margin-bottom:10px;font-size:9px}.chapter-transition p{font-size:12px;line-height:2}.chapter-sources{margin:0;gap:12px 17px}.chapter-sources a{font-size:9px;line-height:1.9}.history-finale{align-items:flex-start;flex-direction:column;padding:26px 0 36px;gap:15px}.history-finale h2{font-size:24px;line-height:1.8}.history-finale p{font-size:12px}.museum-heading h1{font-size:30px}.museum-heading p{font-size:12px}.museum-exhibit aside{padding:24px}.museum-exhibit aside h3{font-size:23px}.deep-cards h3{font-size:20px}.game-note p{font-size:12px}.mast #brand{font-size:12px}.main-nav a[aria-current=page]{background:#242924}main{padding-inline:4%}}@media(prefers-reduced-motion:reduce){.historical-object{transition:none}.cover-seal{animation:none}}
 /* 阅读区保持中性，色彩仅用于方法与转折。 */
 .chapter-narrative p{color:#b3b7ae}.chapter-events p{color:#96a499}.chapter-events h3{color:#ccd1bf}.chapter-events time{color:#c8b78e}.chapter-transition p{color:#b1bfaa}.chapter-sources a{color:#a0b29a}.history-finale p{color:#aab49d}.history-chapter h2{color:#e5e3d4}.chapter-narrative .limit-note{background:#24271f}.chapter-narrative .limit-note p{color:#b2b89f}
+/* 01 / 04：部件档案、编号导览与研究笔记 */
+#match-scene,#growth-scene{position:relative;isolation:isolate}
+#match-scene>canvas,#growth-scene>canvas{display:block;touch-action:none}
+.part-hotspots{position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden}
+.part-hotspots[hidden]{display:none}
+.part-hotspots button{position:absolute;left:0;top:0;width:32px;height:32px;padding:0;pointer-events:auto;border-radius:50%;border:1px solid #afa58b;background:#1a2424ed;color:#f0e3c8;font:11px ui-monospace,monospace;box-shadow:0 0 0 5px #121a1a50;cursor:pointer}
+.part-hotspots button.active{background:#d1b992;color:#172321;border-color:#ead8b9;box-shadow:0 0 0 6px #c8b58e24}
+.part-selector{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #3a4544;background:#161c1d;padding:12px;gap:7px}
+.part-selector button{display:flex;align-items:center;gap:9px;text-align:left;min-height:48px;padding:10px 12px;font-size:11px;line-height:1.7;color:#b5c0b9;border:1px solid #35413e;background:#1c2424;cursor:pointer}
+.part-selector button span{flex:0 0 auto;font:10px ui-monospace,monospace;color:#bbaa87}
+.part-selector button:hover{border-color:#8fa79d;background:#26302d}
+.part-selector button.active{border-color:#bca77e;background:#34372d;color:#eee4cc}
+.museum-exhibit{align-items:stretch}
+.museum-exhibit aside.component-inspector{padding:27px;min-width:0;background:linear-gradient(145deg,#222b29,#1a2122)}
+.part-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:9px;letter-spacing:1px;color:#c9b68f}
+.part-heading i{font-size:9px;font-style:normal;border:1px solid #526a5e;color:#afcaba;padding:4px 7px;white-space:nowrap}
+.component-inspector .part-role{color:#d0d9cc;font-size:13px;margin:0 0 20px}
+.part-io{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-block:1px solid #43504a;padding:16px 0;margin:15px 0 21px}
+.part-io span{display:block;color:#9baf9f;font-size:9px;letter-spacing:1px;margin-bottom:8px}
+.part-io b{font-size:11px;font-weight:400;line-height:1.9;color:#ddd9c6}
+.part-section{margin-top:19px}.part-section h4{margin:0 0 7px;color:#c5b99a;font-size:11px;font-weight:500;letter-spacing:1px}
+.museum-exhibit .part-section p{font-size:12px;line-height:2;margin:0}
+.part-relation{border-top:1px solid #3a4841;padding-top:16px}
+.exhibit-dossier{padding:42px 0 8px;border-top:1px solid #3b4640;margin-top:38px}
+.exhibit-dossier>header{max-width:860px;margin-bottom:26px}
+.exhibit-dossier h2{font-size:29px;font-weight:400;line-height:1.65;letter-spacing:.6px;color:#e2dfd1;margin:14px 0}
+.exhibit-dossier h2 em{color:#bfb393;font-style:normal}
+.exhibit-dossier>header>p{color:#9eaFA7;font-size:13px;line-height:2.15}
+.exhibit-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #43504a;background:#192221}
+.exhibit-process article{position:relative;padding:26px 22px;border-right:1px solid #43504a;min-width:0}
+.exhibit-process article:last-child{border-right:0}
+.exhibit-process article>span{display:block;font:22px ui-monospace,monospace;color:#baa884;margin-bottom:23px}
+.exhibit-process h3,.dossier-pair h3,.dossier-triad h3,.match-context h3{font-size:17px;font-weight:400;line-height:1.7;margin:10px 0;color:#dddccd}
+.exhibit-process p,.dossier-pair p,.dossier-triad p,.match-context p{font-size:12px;line-height:2.1;color:#a5b5aa;margin:0}
+.dossier-pair,.dossier-triad{display:grid;gap:28px;margin-top:28px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.dossier-triad{grid-template-columns:repeat(3,minmax(0,1fr))}
+.dossier-pair article,.dossier-triad article{padding:24px 0;border-top:1px solid #4b5550;min-width:0}
+.dossier-pair article>span,.dossier-triad article>span{font-size:10px;letter-spacing:1px;color:#bdae8d}
+.dossier-pair a{display:inline-block;margin-top:20px;color:#cabb97;font-size:11px}
+.match-context{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px}
+.match-context article{padding:20px 0;border-top:1px solid #657366;min-width:0}
+.match-context time{font:18px ui-monospace,monospace;color:#cab68c}
+.game-analysis{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:10px 0 20px}
+.game-analysis h4{font-size:12px;color:#d1c5a6;font-weight:500;margin:8px 0}
+.game-analysis p{margin:0;font-size:12px;line-height:2.1}
+.dossier-glossary{border-block:1px solid #3f4e45;margin-top:12px;padding:20px 0;color:#b9c8b8;font-size:12px;line-height:2.1}
+.dossier-glossary summary{cursor:pointer;color:#d5c8a8}.dossier-glossary p{max-width:950px;margin:15px 0 0}
+@media(min-width:1050px){#match-view .museum-exhibit,#growth-view .museum-exhibit{grid-template-columns:minmax(0,1.7fr) minmax(330px,1fr)}#match-scene,#growth-scene{height:510px}}
+@media(max-width:1049px){.part-selector{grid-template-columns:repeat(2,minmax(0,1fr))}.exhibit-process,.match-context{grid-template-columns:repeat(2,minmax(0,1fr))}.exhibit-process article:nth-child(2){border-right:0}.exhibit-process article:nth-child(-n+2){border-bottom:1px solid #43504a}.dossier-triad{gap:20px}}
+@media(max-width:600px){.exhibit-dossier{padding-top:28px;margin-top:28px}.exhibit-dossier h2{font-size:24px}.exhibit-dossier>header>p{font-size:12px}.exhibit-process article{padding:20px 15px}.exhibit-process article>span{font-size:19px;margin-bottom:15px}.exhibit-process h3,.dossier-pair h3,.dossier-triad h3,.match-context h3{font-size:15px}.exhibit-process p,.dossier-pair p,.dossier-triad p,.match-context p{font-size:11px}.dossier-pair,.dossier-triad,.game-analysis{grid-template-columns:1fr;gap:14px}.match-context{gap:20px}.part-selector{padding:10px;gap:6px}.part-selector button{font-size:10px;padding:9px;min-height:48px;gap:7px}.museum-exhibit aside.component-inspector{padding:23px}.part-io{gap:15px}.part-hotspots button{width:32px;height:32px}.game-analysis{padding-bottom:15px}.dossier-glossary summary{padding-right:10px}#match-scene,#growth-scene{height:340px}}
+.part-leader{position:absolute;left:0;top:0;height:1px;background:#bbaa83;transform-origin:0 0;opacity:.65;pointer-events:none}.part-leader[hidden]{display:none}
