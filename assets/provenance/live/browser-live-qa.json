@@ -1,0 +1,254 @@
+{
+  "checks": [
+    {
+      "name": "00 neuron运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "00 neuron局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "00 neuron暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "00 neuron可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "neuron精细模型",
+      "passed": true
+    },
+    {
+      "name": "00 rules运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "00 rules局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "00 rules暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "00 rules可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "rules精细模型",
+      "passed": true
+    },
+    {
+      "name": "00 search运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "00 search局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "00 search暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "00 search可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "search精细模型",
+      "passed": true
+    },
+    {
+      "name": "00 learning运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "00 learning局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "00 learning独立转子数量",
+      "passed": true
+    },
+    {
+      "name": "00 learning风扇旋转",
+      "passed": true
+    },
+    {
+      "name": "00 learning转子轴心固定",
+      "passed": true
+    },
+    {
+      "name": "00 learning静态外框不转",
+      "passed": true
+    },
+    {
+      "name": "00 learning暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "00 learning可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "learning精细模型",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统独立转子数量",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统风扇旋转",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统转子轴心固定",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统存在独立静态外框",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统静态外框不转",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "01 计算系统可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "01拆开后风扇仍独立",
+      "passed": true
+    },
+    {
+      "name": "01拆解运转无遮挡",
+      "passed": true
+    },
+    {
+      "name": "04 gpu运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "04 gpu局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "04 gpu独立转子数量",
+      "passed": true
+    },
+    {
+      "name": "04 gpu风扇旋转",
+      "passed": true
+    },
+    {
+      "name": "04 gpu转子轴心固定",
+      "passed": true
+    },
+    {
+      "name": "04 gpu存在独立静态外框",
+      "passed": true
+    },
+    {
+      "name": "04 gpu静态外框不转",
+      "passed": true
+    },
+    {
+      "name": "04 gpu暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "04 gpu可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "04 training运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "04 training局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "04 training暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "04 training可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "04 selfplay运转时钟前进",
+      "passed": true
+    },
+    {
+      "name": "04 selfplay局部信号移动",
+      "passed": true
+    },
+    {
+      "name": "04 selfplay暂停冻结全部运行",
+      "passed": true
+    },
+    {
+      "name": "04 selfplay可恢复运转",
+      "passed": true
+    },
+    {
+      "name": "03待机机制运转",
+      "passed": true
+    },
+    {
+      "name": "03暂停所有层的运转",
+      "passed": true
+    },
+    {
+      "name": "03数据流同步暂停",
+      "passed": true
+    },
+    {
+      "name": "03暂停后聚焦隐藏全局粒子",
+      "passed": true
+    },
+    {
+      "name": "03暂停时回到全景恢复原有粒子",
+      "passed": true
+    },
+    {
+      "name": "03恢复前向传播",
+      "passed": true
+    },
+    {
+      "name": "离开03后停止后台传播",
+      "passed": true
+    },
+    {
+      "name": "移动端运转控件可见",
+      "passed": true
+    },
+    {
+      "name": "移动端无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "减少动态效果时风扇静止",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "renderer": "Edge SwiftShader; functional validation only"
+}

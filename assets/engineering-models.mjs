@@ -1,6 +1,6 @@
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
-import computeSystem from './models/compute-system.glb';
-import accelerator from './models/accelerator.glb';
+import computeSystem from './models/compute-system-live.glb';
+import accelerator from './models/accelerator-live.glb';
 
 const buffers = {match: computeSystem, gpu: accelerator};
 
@@ -12,6 +12,7 @@ export async function loadEngineeringModel(mode) {
   const bytes = buffers[mode];
   const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
   const result = await new GLTFLoader().parseAsync(buffer, '');
+  result.scene.animations = result.animations;
   return result.scene;
 }
 

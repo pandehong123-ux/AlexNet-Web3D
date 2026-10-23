@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "name": "快速回到缓存模型不串模式",
+      "passed": true
+    },
+    {
+      "name": "窄画幅初始缩放",
+      "passed": true
+    },
+    {
+      "name": "固定尺寸窄画幅收拢恢复缩放",
+      "passed": true
+    },
+    {
+      "name": "销毁已打开大厅清理全站暂停标记",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

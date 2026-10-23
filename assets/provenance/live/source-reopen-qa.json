@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "sha256": "988dead58cb5d2e41344ff08d58f99cb7ef5074ef0fc91bdcb4e3bb7674ca92d",
+  "default_scene": "ANIM-01-Compute-System",
+  "scene_count": 3,
+  "no_cube": true,
+  "original_source_scene_fingerprint_unchanged": true,
+  "normal_blend_opened_without_empty_library_scene": true
+}

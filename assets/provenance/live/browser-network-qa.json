@@ -1,0 +1,77 @@
+{
+  "version": "专业计算解剖版",
+  "testedAt": "2026-10-23T06:17:57.296Z",
+  "browser": "155.0.4283.62",
+  "renderer": "SwiftShader software, not physical GPU performance",
+  "checks": [
+    {
+      "name": "13层中文导航",
+      "passed": true
+    },
+    {
+      "name": "无儿童与亲子界面",
+      "passed": true
+    },
+    {
+      "name": "专业卷积说明",
+      "passed": true
+    },
+    {
+      "name": "窗口计算响应改变",
+      "passed": true
+    },
+    {
+      "name": "聚焦层视角",
+      "passed": true
+    },
+    {
+      "name": "最大池化真实输出",
+      "passed": true
+    },
+    {
+      "name": "展平保留32个采样元素",
+      "passed": true
+    },
+    {
+      "name": "整流输出为零",
+      "passed": true
+    },
+    {
+      "name": "概率归一化",
+      "passed": true
+    },
+    {
+      "name": "展开切换",
+      "passed": true
+    },
+    {
+      "name": "暂停冻结进度",
+      "passed": true
+    },
+    {
+      "name": "逐步保留暂停",
+      "passed": true
+    },
+    {
+      "name": "完成有非推理声明",
+      "passed": true
+    },
+    {
+      "name": "恢复初态",
+      "passed": true
+    },
+    {
+      "name": "历史正确标注集成提交",
+      "passed": true
+    },
+    {
+      "name": "手机无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "手机说明在模型下方",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

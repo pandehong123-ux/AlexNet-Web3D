@@ -11,7 +11,7 @@ def package(destination):
     if destination.exists():
         raise FileExistsError(f'Delivery already exists: {destination}')
     files = [ROOT / name for name in [
-        'index.html', 'script.js', 'style.css', 'gallery.css', 'visitor.css', 'walk.css',
+        'index.html', 'script.js', 'style.css', 'gallery.css', 'visitor.css', 'walk.css', 'motion.css',
         'README.md', 'package.json', 'package-lock.json', 'build.mjs', '本地预览.bat',
         '.gitignore', '.gitattributes',
     ]]

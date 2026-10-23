@@ -1,0 +1,82 @@
+[
+  {
+    "asset": "compute-system-live.glb",
+    "rendered_from": "reimported delivered animated GLB",
+    "resolution": [
+      1100,
+      820
+    ],
+    "frames": [
+      {
+        "frame": 1,
+        "angle_degrees": 0.0,
+        "file": "output/live-blender/compute-frame-001.png",
+        "bytes": 1013213,
+        "sha256": "fb279bc1fa534e4bfb02cf345131aeb4973d8fde767830e088d38d4a57061b43"
+      },
+      {
+        "frame": 9,
+        "angle_degrees": 90.0,
+        "file": "output/live-blender/compute-frame-009.png",
+        "bytes": 1013803,
+        "sha256": "0ff57cadc64a5e1f4e97c46c4ffb07ba17372ca1db168777926e62e9dd7f8def"
+      },
+      {
+        "frame": 17,
+        "angle_degrees": 180.0,
+        "file": "output/live-blender/compute-frame-017.png",
+        "bytes": 1015127,
+        "sha256": "e2e753f8243f69eb0c3a413d56cf6e16635dfbb58b050064c306088cefd702e1"
+      },
+      {
+        "frame": 25,
+        "angle_degrees": 270.0,
+        "file": "output/live-blender/compute-frame-025.png",
+        "bytes": 1014398,
+        "sha256": "4e79364964732af4826898442bdb8a1baf0b5c5439c73386225ae52254412100"
+      }
+    ],
+    "fixed_support_matrices_unchanged": true,
+    "rotor_pivots_stationary": true
+  },
+  {
+    "asset": "accelerator-live.glb",
+    "rendered_from": "reimported delivered animated GLB",
+    "resolution": [
+      1100,
+      820
+    ],
+    "frames": [
+      {
+        "frame": 1,
+        "angle_degrees": 0.0,
+        "file": "output/live-blender/accelerator-frame-001.png",
+        "bytes": 1161966,
+        "sha256": "68fa3bfd99417bc83f625399d08c5065e4c19eee4f0f926934c5ac167562d908"
+      },
+      {
+        "frame": 9,
+        "angle_degrees": 90.0,
+        "file": "output/live-blender/accelerator-frame-009.png",
+        "bytes": 1162731,
+        "sha256": "b75ed3aeb5ceca054572322df680244e4e08b882ca6ebe442f6b90278624ee06"
+      },
+      {
+        "frame": 17,
+        "angle_degrees": 180.0,
+        "file": "output/live-blender/accelerator-frame-017.png",
+        "bytes": 1163391,
+        "sha256": "7010cc3128c65b92e2bebe0b3bcbd9e65444d2d3616669675950d5613b5f2973"
+      },
+      {
+        "frame": 25,
+        "angle_degrees": 270.0,
+        "file": "output/live-blender/accelerator-frame-025.png",
+        "bytes": 1162317,
+        "sha256": "9e1bb11e14dca5b7bbd061dbb5b9a4a630e7db87df5dd0e9046fcd17f859e9e2"
+      }
+    ],
+    "fixed_support_matrices_unchanged": true,
+    "rotor_pivots_stationary": true
+  }
+]

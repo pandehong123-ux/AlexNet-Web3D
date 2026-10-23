@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "ordinary_blend_file": true,
+  "default_scene": "ANIM-01-Compute-System",
+  "scenes": [
+    "ANIM-01-Compute-System",
+    "ANIM-02-Accelerator",
+    "COL-AI-Museum-Engineering"
+  ],
+  "no_cube": true,
+  "original_source_scene_unchanged": true,
+  "playback": [
+    {
+      "scene": "ANIM-01-Compute-System",
+      "rotors": 2,
+      "static_parts": 6,
+      "keyframes": [
+        1,
+        9,
+        17,
+        25,
+        33
+      ],
+      "local_y_rotation_verified": true,
+      "cycle_extrapolation_verified_through_frame": 41,
+      "support_matrices_and_pivots_fixed": true,
+      "playback_range": [
+        1,
+        32
+      ]
+    },
+    {
+      "scene": "ANIM-02-Accelerator",
+      "rotors": 2,
+      "static_parts": 5,
+      "keyframes": [
+        1,
+        9,
+        17,
+        25,
+        33
+      ],
+      "local_y_rotation_verified": true,
+      "cycle_extrapolation_verified_through_frame": 41,
+      "support_matrices_and_pivots_fixed": true,
+      "playback_range": [
+        1,
+        32
+      ]
+    }
+  ]
+}

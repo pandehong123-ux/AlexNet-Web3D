@@ -41,6 +41,10 @@
 | assets/models/compute-system.glb | 六部件计算系统与棋盘；独立节点含稳定的 `extras.key`。 |
 | assets/models/accelerator.glb | 底板、计算核心、显存、散热器、风扇五部件。 |
 | assets/models/ai-museum-engineering-v002.blend | 可编辑工程源文件，保留独立任务场景与细分结构。 |
+| assets/models/ai-museum-live-v003.blend | 新版可播放工程源文件：计算系统与加速器共四个独立风扇转子。 |
+| assets/models/compute-system-live.glb | 网页01使用的循环风扇动画模型。 |
+| assets/models/accelerator-live.glb | 网页04使用的循环风扇动画模型。 |
+| assets/models/live-manifest.json | 动画轨道、轴心、源文件哈希及渲染验收记录。 |
 | assets/provenance/engineering-task-only.blend | 仅含任务场景的最终可编辑归档，不含初始立方体场景。 |
 | assets/models/learning-sculpture.glb | 本地混元3D生成并清理、减面、着色的原创抽象雕塑。 |
 | assets/models/engineering-manifest.json | 几何、节点、文件与源场景验收记录。 |
@@ -51,6 +55,8 @@ GLB 由构建器嵌入离线 script.js，在浏览器内存中解析；独立 GL
 `assets/provenance/` 保留最小生成证据集与源文件，使用相对路径映射检查哈希，不依赖本机 output 目录或绝对路径。对应文件在 Git 中保持原始字节，避免跨系统换行转换破坏证据指纹。
 
 复用指南见 [三维制作与交互管线](docs/3d-pipeline.md)、[本轮验收](docs/2026-10-23-exhibit-upgrade.md) 和 [ComfyUI 复现说明](tools/comfy/README.md)。
+
+最新的00模型细化与01、03、04运行动画见 [运转动画制作与验收](docs/2026-10-23-operating-exhibits.md)。直接打开首页即可体验；模型画布底部提供“暂停运转 / 继续运转”。03沿用“运行数据流、暂停、单步”控制。所有运转均为教学示意，风扇速度不代表真实硬件转速。
 
 ## 实现边界
 
@@ -69,6 +75,8 @@ npm run build
 主要模块：
 
 - `museum.mjs` / `museum-data.mjs`：内容、展区交互与教学状态。
+- `history-models.mjs`：00四组原创原理装置、曲线信号通路与细分结构。
+- `exhibit-motion.mjs`：01/04动画播放器、历史装置运转、局部信号与受控时间。
 - `museum-scene.mjs` / `exhibit-layout.mjs`：三维选择、相机、拆解与部件布局。
 - `engineering-models.mjs`：内存 GLB 解析与资源释放。
 - `museum-walk.mjs` / `walk-state.mjs`：大厅、环视、行走碰撞与展台入口。
@@ -77,6 +85,8 @@ npm run build
 - `tools/blender/`、`tools/comfy/`：本地制作、导出及可复现生成管线。
 
 `npm test` 覆盖原算法、关卡、角色、布局、资产与行走边界。浏览器脚本为 `tests/engineering-browser.cjs`、`walk-browser.cjs`、`visitor-browser.cjs`，原网络和六关回归为 `browser.cjs`、`navigation-browser.cjs`。这些脚本使用本机 Playwright 绝对路径，换电脑需调整依赖路径。
+
+新增 `tests/live-exhibits-browser.cjs` 检查风扇、静态外框、暂停、局部聚焦、后台停转和减少动态效果；`tests/live-model-assets.test.mjs` 直接解析交付GLB，验证部件重挂之后的真实动画。动画接触表与最小验收证据已归档到 `assets/provenance/live/`，可随Git迁移。
 
 本轮具体结果见验收文档与 `output/` 记录。测试使用 Edge 软件渲染，不能据此声称真实手机帧率、制造精度或现场教学成效。离开展区、打开大厅时暂停背景三维渲染。
 

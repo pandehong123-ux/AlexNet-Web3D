@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-23T05:53:00.051305+00:00",
+  "blender": "5.2.2 LTS",
+  "source_scene": "COL-AI-Museum-Engineering",
+  "geometry_policy": "Evaluated copies of existing source only; static merged by part, each rotor independently merged.",
+  "original_geometry_retained_in_new_blend": true,
+  "assets": [
+    {
+      "file": "compute-system-live.glb",
+      "scene": "ANIM-01-Compute-System",
+      "part_keys": [
+        "board",
+        "cpu",
+        "gpu",
+        "memory",
+        "network",
+        "shell"
+      ],
+      "rotors": [
+        {
+          "id": "compute-shell-fan-left",
+          "node_name": "GEO-Rotor-compute-shell-fan-left",
+          "part_key": "shell",
+          "source_hub": "GEO-Fan-hub",
+          "source_members": [
+            "GEO-Fan-hub",
+            "GEO-Swept-fan-blade",
+            "GEO-Swept-fan-blade.001",
+            "GEO-Swept-fan-blade.002",
+            "GEO-Swept-fan-blade.003",
+            "GEO-Swept-fan-blade.004",
+            "GEO-Swept-fan-blade.005",
+            "GEO-Swept-fan-blade.006",
+            "GEO-Swept-fan-blade.007",
+            "GEO-Swept-fan-blade.008"
+          ],
+          "pivot_part_local_xyz": [
+            -0.7800002098083496,
+            2.869999885559082,
+            2.1667896987764834e-07
+          ],
+          "pivot_asset_gltf_xyz": [
+            -4.380000114440918,
+            2.869999885559082,
+            -0.0
+          ],
+          "local_axis": "y",
+          "speed_rad_s": 4.71238898038469,
+          "frames": [
+            1,
+            9,
+            17,
+            25,
+            33
+          ],
+          "angles_degrees": [
+            0,
+            90,
+            180,
+            270,
+            360
+          ]
+        },
+        {
+          "id": "compute-shell-fan-right",
+          "node_name": "GEO-Rotor-compute-shell-fan-right",
+          "part_key": "shell",
+          "source_hub": "GEO-Fan-hub.001",
+          "source_members": [
+            "GEO-Fan-hub.001",
+            "GEO-Swept-fan-blade.009",
+            "GEO-Swept-fan-blade.010",
+            "GEO-Swept-fan-blade.011",
+            "GEO-Swept-fan-blade.012",
+            "GEO-Swept-fan-blade.013",
+            "GEO-Swept-fan-blade.014",
+            "GEO-Swept-fan-blade.015",
+            "GEO-Swept-fan-blade.016",
+            "GEO-Swept-fan-blade.017"
+          ],
+          "pivot_part_local_xyz": [
+            0.7799999713897705,
+            2.869999885559082,
+            2.1667896987764834e-07
+          ],
+          "pivot_asset_gltf_xyz": [
+            -2.819999933242798,
+            2.869999885559082,
+            -0.0
+          ],
+          "local_axis": "y",
+          "speed_rad_s": 4.71238898038469,
+          "frames": [
+            1,
+            9,
+            17,
+            25,
+            33
+          ],
+          "angles_degrees": [
+            0,
+            90,
+            180,
+            270,
+            360
+          ]
+        }
+      ],
+      "source_geometry_objects": 767,
+      "source_root": "GEO-match-assembly",
+      "budget": {
+        "bytes": 3145728,
+        "nodes": 18,
+        "triangles": 40000
+      },
+      "bytes": 1622548,
+      "sha256": "192b029f715f0d15f3bd9a8d61f0e659927b522a552a5b5ab518ed2012dfa0d4",
+      "nodes": 14,
+      "meshes": 8,
+      "materials": 15,
+      "vertices": 42608,
+      "triangles": 38236,
+      "primitives": 42,
+      "static_meshes": 6,
+      "rotor_count": 2,
+      "animation_clips": 1,
+      "clip_name": "ANIM-01-Compute-System",
+      "animation_tracks": [
+        {
+          "id": "compute-shell-fan-left",
+          "samples": 33,
+          "duration_seconds": 1.3333333730697632,
+          "rotation_degrees": 360.0000305175781,
+          "axis": "local y",
+          "speed_rad_s": 4.71238898038469,
+          "continuous_loop": true
+        },
+        {
+          "id": "compute-shell-fan-right",
+          "samples": 33,
+          "duration_seconds": 1.3333333730697632,
+          "rotation_degrees": 360.0000305175781,
+          "axis": "local y",
+          "speed_rad_s": 4.71238898038469,
+          "continuous_loop": true
+        }
+      ],
+      "checks": [
+        "GLB header/chunks/buffers",
+        "finite positions and valid triangle indices",
+        "unit normals and nonzero triangle areas",
+        "unchanged triangle count from original",
+        "same six/five top-level part keys",
+        "exact two isolated rotors per asset",
+        "hub-center pivots in correct parent",
+        "static shrouds/bearings/supports excluded",
+        "local-Y rotation only, full monotonic 360-degree loop",
+        "size/node/triangle budgets"
+      ]
+    },
+    {
+      "file": "accelerator-live.glb",
+      "scene": "ANIM-02-Accelerator",
+      "part_keys": [
+        "compute",
+        "fan",
+        "heatsink",
+        "pcb",
+        "vram"
+      ],
+      "rotors": [
+        {
+          "id": "accelerator-fan-fan-left",
+          "node_name": "GEO-Rotor-accelerator-fan-fan-left",
+          "part_key": "fan",
+          "source_hub": "GEO-Fan-hub.002",
+          "source_members": [
+            "GEO-Fan-hub.002",
+            "GEO-Swept-fan-blade.018",
+            "GEO-Swept-fan-blade.019",
+            "GEO-Swept-fan-blade.020",
+            "GEO-Swept-fan-blade.021",
+            "GEO-Swept-fan-blade.022",
+            "GEO-Swept-fan-blade.023",
+            "GEO-Swept-fan-blade.024",
+            "GEO-Swept-fan-blade.025",
+            "GEO-Swept-fan-blade.026"
+          ],
+          "pivot_part_local_xyz": [
+            -1.4300003051757812,
+            1.0499999523162842,
+            7.927279455088865e-08
+          ],
+          "pivot_asset_gltf_xyz": [
+            -1.4300003051757812,
+            1.0499999523162842,
+            -0.0
+          ],
+          "local_axis": "y",
+          "speed_rad_s": 4.71238898038469,
+          "frames": [
+            1,
+            9,
+            17,
+            25,
+            33
+          ],
+          "angles_degrees": [
+            0,
+            90,
+            180,
+            270,
+            360
+          ]
+        },
+        {
+          "id": "accelerator-fan-fan-right",
+          "node_name": "GEO-Rotor-accelerator-fan-fan-right",
+          "part_key": "fan",
+          "source_hub": "GEO-Fan-hub.003",
+          "source_members": [
+            "GEO-Fan-hub.003",
+            "GEO-Swept-fan-blade.027",
+            "GEO-Swept-fan-blade.028",
+            "GEO-Swept-fan-blade.029",
+            "GEO-Swept-fan-blade.030",
+            "GEO-Swept-fan-blade.031",
+            "GEO-Swept-fan-blade.032",
+            "GEO-Swept-fan-blade.033",
+            "GEO-Swept-fan-blade.034",
+            "GEO-Swept-fan-blade.035"
+          ],
+          "pivot_part_local_xyz": [
+            1.4300003051757812,
+            1.0499999523162842,
+            7.927279455088865e-08
+          ],
+          "pivot_asset_gltf_xyz": [
+            1.4300003051757812,
+            1.0499999523162842,
+            -0.0
+          ],
+          "local_axis": "y",
+          "speed_rad_s": 4.71238898038469,
+          "frames": [
+            1,
+            9,
+            17,
+            25,
+            33
+          ],
+          "angles_degrees": [
+            0,
+            90,
+            180,
+            270,
+            360
+          ]
+        }
+      ],
+      "source_geometry_objects": 420,
+      "source_root": "GEO-accelerator-assembly",
+      "budget": {
+        "bytes": 2097152,
+        "nodes": 16,
+        "triangles": 18000
+      },
+      "bytes": 740816,
+      "sha256": "5fa20bfc99048389576e3bb169088cc575caa2f349413e80c6a69ce8d65a368f",
+      "nodes": 12,
+      "meshes": 7,
+      "materials": 9,
+      "vertices": 20917,
+      "triangles": 15396,
+      "primitives": 20,
+      "static_meshes": 5,
+      "rotor_count": 2,
+      "animation_clips": 1,
+      "clip_name": "ANIM-02-Accelerator",
+      "animation_tracks": [
+        {
+          "id": "accelerator-fan-fan-left",
+          "samples": 33,
+          "duration_seconds": 1.3333333730697632,
+          "rotation_degrees": 360.0000305175781,
+          "axis": "local y",
+          "speed_rad_s": 4.71238898038469,
+          "continuous_loop": true
+        },
+        {
+          "id": "accelerator-fan-fan-right",
+          "samples": 33,
+          "duration_seconds": 1.3333333730697632,
+          "rotation_degrees": 360.0000305175781,
+          "axis": "local y",
+          "speed_rad_s": 4.71238898038469,
+          "continuous_loop": true
+        }
+      ],
+      "checks": [
+        "GLB header/chunks/buffers",
+        "finite positions and valid triangle indices",
+        "unit normals and nonzero triangle areas",
+        "unchanged triangle count from original",
+        "same six/five top-level part keys",
+        "exact two isolated rotors per asset",
+        "hub-center pivots in correct parent",
+        "static shrouds/bearings/supports excluded",
+        "local-Y rotation only, full monotonic 360-degree loop",
+        "size/node/triangle budgets"
+      ]
+    }
+  ],
+  "animation": {
+    "fps": 24,
+    "duration_seconds": 1.3333333333333333,
+    "speed_rad_s": 4.71238898038469,
+    "source_keyframes": [
+      1,
+      9,
+      17,
+      25,
+      33
+    ],
+    "source_angles_degrees": [
+      0,
+      90,
+      180,
+      270,
+      360
+    ],
+    "source_playback_frames": [
+      1,
+      32
+    ],
+    "interpolation": "linear",
+    "glb_loop": "Three AnimationMixer LoopRepeat",
+    "rotation_axis": "local Y in source and GLB; exported child coordinates rebased without changing world surfaces",
+    "export_normalization": {
+      "parent_rotation_baked_into_child_coordinates": true,
+      "animation_quaternions_conjugated_to_same_basis": true,
+      "time_zero_shifted_to_first_sample": true,
+      "initial_node_pose_matches_first_sample": true
+    }
+  },
+  "source_blend": {
+    "file": "assets/models/ai-museum-live-v003.blend",
+    "bytes": 10735448,
+    "sha256": "988dead58cb5d2e41344ff08d58f99cb7ef5074ef0fc91bdcb4e3bb7674ca92d",
+    "scenes": [
+      "ANIM-01-Compute-System",
+      "ANIM-02-Accelerator",
+      "COL-AI-Museum-Engineering"
+    ],
+    "default_scene": "ANIM-01-Compute-System",
+    "qa": {
+      "status": "passed",
+      "ordinary_blend_file": true,
+      "default_scene": "ANIM-01-Compute-System",
+      "scenes": [
+        "ANIM-01-Compute-System",
+        "ANIM-02-Accelerator",
+        "COL-AI-Museum-Engineering"
+      ],
+      "no_cube": true,
+      "original_source_scene_unchanged": true,
+      "playback": [
+        {
+          "scene": "ANIM-01-Compute-System",
+          "rotors": 2,
+          "static_parts": 6,
+          "keyframes": [
+            1,
+            9,
+            17,
+            25,
+            33
+          ],
+          "local_y_rotation_verified": true,
+          "cycle_extrapolation_verified_through_frame": 41,
+          "support_matrices_and_pivots_fixed": true,
+          "playback_range": [
+            1,
+            32
+          ]
+        },
+        {
+          "scene": "ANIM-02-Accelerator",
+          "rotors": 2,
+          "static_parts": 5,
+          "keyframes": [
+            1,
+            9,
+            17,
+            25,
+            33
+          ],
+          "local_y_rotation_verified": true,
+          "cycle_extrapolation_verified_through_frame": 41,
+          "support_matrices_and_pivots_fixed": true,
+          "playback_range": [
+            1,
+            32
+          ]
+        }
+      ]
+    },
+    "reopen_qa": {
+      "status": "passed",
+      "sha256": "988dead58cb5d2e41344ff08d58f99cb7ef5074ef0fc91bdcb4e3bb7674ca92d",
+      "default_scene": "ANIM-01-Compute-System",
+      "scene_count": 3,
+      "no_cube": true,
+      "original_source_scene_fingerprint_unchanged": true,
+      "normal_blend_opened_without_empty_library_scene": true
+    }
+  },
+  "preservation": {
+    "protected_files_sha256": {
+      "assets/models/accelerator.glb": "6beed3a1009c098c9a815ece045b21b45240c295b3cd0858b776162de4aff802",
+      "assets/models/ai-museum-engineering-v002.blend": "b3e97ffdd8a6a59207c9b6488c121bc98b498f1423b7f8741350cb8c0870776b",
+      "assets/models/comfy-provenance.json": "8ca71a2fe22e38724a77fe072d8ee6c9f8e49a64e15ab1e11d4ac028bad8ab9d",
+      "assets/models/compute-system.glb": "a5e996140fb309ed7991a6a26237a44309bd44aea33709a9607d7812edc51d3a",
+      "assets/models/engineering-manifest.json": "66a3dd3314601c6372c8d7f30c750a30f7821230ef659f440e89b6e85761942a",
+      "assets/models/learning-sculpture.glb": "52fecf2b707fe43de732d9668938d37328268863739081c5bdaba362ad567faf",
+      "assets/provenance/accelerator-final-qa.png": "3f78e93910a362bb7bfddad9409be3b852c4b2ee0e1c93f65e50bdb5a223b224",
+      "assets/provenance/comfy-executed.api.json": "9c8d318d91c0d63508a319a11a2c1711138fb47280bb9e79993bad82679b14ac",
+      "assets/provenance/comfy-hunyuan-raw.glb": "599b7fb329661384a63da0fc3010f18cfecd0c28524a5eec65d73027d85f0faa",
+      "assets/provenance/comfy-input.png": "89a6d0522e760facb42fd3218174147f1fc435b23414ada8dfe812bc58acccca",
+      "assets/provenance/engineering-task-only.blend": "c4a015434a99cc94dae8535d83f3c909e1cda01dcfa5b011c3063238a3f10573",
+      "assets/provenance/evidence-index.json": "a663a22a2a88a42d856967dd5183fa3c0929c37b353febca8bd3c851f697d16f",
+      "assets/provenance/portable-verification.json": "f2edc01a8315d1981cddd42d1e76d3d9108f5e849bae1db7a816f381dfb665ef",
+      "assets/provenance/rack-final-qa.png": "698b57462ff5525814a975c4ff18921446f9c380e7b29cb9482d0928cf11f492",
+      "assets/provenance/README.md": "819824985d6fadc50509676a4e47ba98361a171d5b2c727bee96bf7005ca25b8",
+      "assets/provenance/verify-isolated.mjs": "3e6c6665f681ce0e0b06aca837a131cb967017758b55219b86f9f554803e534d"
+    },
+    "protected_files_unchanged": true,
+    "original_scene_fingerprints": {
+      "COL-AI-Museum-Engineering": "904acc5b68b1c324f45093856186ac2eaa9a7981f64ac1b765f3c71581b93d31",
+      "Scene": "ab263bbc3e1bcff4a47e94c90ccf665977a6e64ed03e2d5b55a1c35e94eaff7a"
+    },
+    "source_and_user_scenes_unchanged": true,
+    "active_scene_restored": "Scene",
+    "user_filepath_unchanged": true
+  },
+  "validation": {
+    "status": "passed",
+    "unique_rotors": 4,
+    "old_asset_hashes_unchanged": true,
+    "script_sha256": "a42c32045f720040e8e461c74473bf16c725628ad78ab57c7e7dba01315e327f"
+  },
+  "visual_qa": {
+    "status": "accepted",
+    "review": "Reviewed the persistent 4-frame contact sheets for both delivered GLBs, plus full-size frame images. All four fans remain centered; blade and hub orientation changes while rings, bearings, housings and heatsink supports remain fixed. Silhouettes and lighting are stable, fan pairs stay within their rings, and no intersections, texture flicker or framing changes are visible in the sampled poses. Each rotor retains nine original blades and its hub. Individual frame-difference reports have zero warnings. The combined report warning occurs only at the boundary between the two different assets. Actual Three.js shared-scene AnimationMixer setTime, repeat, pause/resume, root explosion binding and original-bounds checks passed. The new ordinary BLEND reopens in its live scene with original source geometry intact and no Cube. Fan speed is a readable illustrative speed rather than a physical RPM claim.",
+    "gate": "animation-quality-gate",
+    "renders_from_delivered_glb": true,
+    "frames": [
+      {
+        "asset": "compute-system-live.glb",
+        "rendered_from": "reimported delivered animated GLB",
+        "resolution": [
+          1100,
+          820
+        ],
+        "frames": [
+          {
+            "frame": 1,
+            "angle_degrees": 0.0,
+            "file": "output/live-blender/compute-frame-001.png",
+            "bytes": 1013213,
+            "sha256": "fb279bc1fa534e4bfb02cf345131aeb4973d8fde767830e088d38d4a57061b43"
+          },
+          {
+            "frame": 9,
+            "angle_degrees": 90.0,
+            "file": "output/live-blender/compute-frame-009.png",
+            "bytes": 1013803,
+            "sha256": "0ff57cadc64a5e1f4e97c46c4ffb07ba17372ca1db168777926e62e9dd7f8def"
+          },
+          {
+            "frame": 17,
+            "angle_degrees": 180.0,
+            "file": "output/live-blender/compute-frame-017.png",
+            "bytes": 1015127,
+            "sha256": "e2e753f8243f69eb0c3a413d56cf6e16635dfbb58b050064c306088cefd702e1"
+          },
+          {
+            "frame": 25,
+            "angle_degrees": 270.0,
+            "file": "output/live-blender/compute-frame-025.png",
+            "bytes": 1014398,
+            "sha256": "4e79364964732af4826898442bdb8a1baf0b5c5439c73386225ae52254412100"
+          }
+        ],
+        "fixed_support_matrices_unchanged": true,
+        "rotor_pivots_stationary": true
+      },
+      {
+        "asset": "accelerator-live.glb",
+        "rendered_from": "reimported delivered animated GLB",
+        "resolution": [
+          1100,
+          820
+        ],
+        "frames": [
+          {
+            "frame": 1,
+            "angle_degrees": 0.0,
+            "file": "output/live-blender/accelerator-frame-001.png",
+            "bytes": 1161966,
+            "sha256": "68fa3bfd99417bc83f625399d08c5065e4c19eee4f0f926934c5ac167562d908"
+          },
+          {
+            "frame": 9,
+            "angle_degrees": 90.0,
+            "file": "output/live-blender/accelerator-frame-009.png",
+            "bytes": 1162731,
+            "sha256": "b75ed3aeb5ceca054572322df680244e4e08b882ca6ebe442f6b90278624ee06"
+          },
+          {
+            "frame": 17,
+            "angle_degrees": 180.0,
+            "file": "output/live-blender/accelerator-frame-017.png",
+            "bytes": 1163391,
+            "sha256": "7010cc3128c65b92e2bebe0b3bcbd9e65444d2d3616669675950d5613b5f2973"
+          },
+          {
+            "frame": 25,
+            "angle_degrees": 270.0,
+            "file": "output/live-blender/accelerator-frame-025.png",
+            "bytes": 1162317,
+            "sha256": "9e1bb11e14dca5b7bbd061dbb5b9a4a630e7db87df5dd0e9046fcd17f859e9e2"
+          }
+        ],
+        "fixed_support_matrices_unchanged": true,
+        "rotor_pivots_stationary": true
+      }
+    ],
+    "contact_sheet": "output/live-blender/rotors-contact-sheet.png",
+    "reviewed_utc": "2026-10-23T06:06:12.315724+00:00",
+    "contact_sheet_sha256": "cf281d755b5f9c6403de4be22cc0f859122d120bce6945ec325fcf69fab38ebc",
+    "per_asset_contact_sheets": [
+      {
+        "file": "output/live-blender/compute-contact-sheet.png",
+        "sha256": "3e552114df98b857dd735c731ada8f5c70676dea8405e3b2df2009af516765e7",
+        "frame_difference_report": {
+          "schema": "animation_contact_sheet_report.v1",
+          "frames": [
+            "output/live-blender/compute-frame-001.png",
+            "output/live-blender/compute-frame-009.png",
+            "output/live-blender/compute-frame-017.png",
+            "output/live-blender/compute-frame-025.png"
+          ],
+          "frame_diff": [
+            {
+              "from": "compute-frame-001.png",
+              "to": "compute-frame-009.png",
+              "mean_rgb_diff": 2.6394349593495936
+            },
+            {
+              "from": "compute-frame-009.png",
+              "to": "compute-frame-017.png",
+              "mean_rgb_diff": 2.639529933481153
+            },
+            {
+              "from": "compute-frame-017.png",
+              "to": "compute-frame-025.png",
+              "mean_rgb_diff": 2.6344360679970436
+            }
+          ],
+          "warnings": []
+        }
+      },
+      {
+        "file": "output/live-blender/accelerator-contact-sheet.png",
+        "sha256": "4b033aa254c0b826e3e567622ed34d72b9aae33214391eb7871cbfa688bf8775",
+        "frame_difference_report": {
+          "schema": "animation_contact_sheet_report.v1",
+          "frames": [
+            "output/live-blender/accelerator-frame-001.png",
+            "output/live-blender/accelerator-frame-009.png",
+            "output/live-blender/accelerator-frame-017.png",
+            "output/live-blender/accelerator-frame-025.png"
+          ],
+          "frame_diff": [
+            {
+              "from": "accelerator-frame-001.png",
+              "to": "accelerator-frame-009.png",
+              "mean_rgb_diff": 3.731842572062084
+            },
+            {
+              "from": "accelerator-frame-009.png",
+              "to": "accelerator-frame-017.png",
+              "mean_rgb_diff": 3.6941659275683665
+            },
+            {
+              "from": "accelerator-frame-017.png",
+              "to": "accelerator-frame-025.png",
+              "mean_rgb_diff": 3.7774449371766443
+            }
+          ],
+          "warnings": []
+        }
+      }
+    ],
+    "combined_sheet_warning_review": "The combined-sheet helper compares the last compute image to the first accelerator image and flags their different subjects. This is a row/asset boundary, not a temporal jump. Both individual four-frame reports have zero warnings."
+  },
+  "runtime": {
+    "top_level_part_keys_unchanged": true,
+    "rotor_node_contract": {
+      "motion": "rotor",
+      "axis": "y",
+      "speed": "radians per second",
+      "id": "unique stable rotor ID"
+    },
+    "animation_clips": "One clip per GLB, drives both rotors; use mixer.clipAction(clip).play() with LoopRepeat.",
+    "avoid_double_rotation": "Use embedded mixer tracks OR manual extras speed, not both on the same rotor.",
+    "axes": "+Y up, +Z front; numeric scale matches existing engineering GLBs",
+    "tested_in_three": {
+      "status": "passed",
+      "three_revision": "180",
+      "contract": "Both GLB roots reparented to one THREE.Scene before new AnimationMixer(scene); both clips play using mixer.setTime(accumulatedTime).",
+      "unique_rotor_names": [
+        "GEO-Rotor-compute-shell-fan-left",
+        "GEO-Rotor-compute-shell-fan-right",
+        "GEO-Rotor-accelerator-fan-fan-left",
+        "GEO-Rotor-accelerator-fan-fan-right"
+      ],
+      "checks": [
+        {
+          "time_seconds": 0,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 0.113,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 0.3333333333333333,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 0.6666666666666666,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 1,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 1.3332333333333333,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 1.4463333333333332,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        },
+        {
+          "time_seconds": 13.446333333333332,
+          "all_four_local_y_rotors_correct": true,
+          "supports_fixed": true,
+          "pivots_fixed": true
+        }
+      ],
+      "shared_scene_tracks_unique": true,
+      "pause_resume_clock_verified": true,
+      "root_explosion_track_binding_verified": true,
+      "bounds_match_original_static_glbs": true,
+      "assets": [
+        {
+          "file": "compute-system-live.glb",
+          "clip": "ANIM-01-Compute-System",
+          "duration_seconds": 1.3333333730697632,
+          "tracks": [
+            "GEO-Rotor-compute-shell-fan-left.quaternion",
+            "GEO-Rotor-compute-shell-fan-right.quaternion"
+          ],
+          "bounds": {
+            "min": [
+              -5.3999998569488525,
+              -2.6050004959106445,
+              -2.90000057220459
+            ],
+            "max": [
+              6.900000095367432,
+              2.92900013923645,
+              2.90000057220459
+            ],
+            "size": [
+              12.299999952316284,
+              5.534000635147095,
+              5.80000114440918
+            ]
+          }
+        },
+        {
+          "file": "accelerator-live.glb",
+          "clip": "ANIM-02-Accelerator",
+          "duration_seconds": 1.3333333730697632,
+          "tracks": [
+            "GEO-Rotor-accelerator-fan-fan-left.quaternion",
+            "GEO-Rotor-accelerator-fan-fan-right.quaternion"
+          ],
+          "bounds": {
+            "min": [
+              -3.200000047683716,
+              -1.3300005197525024,
+              -1.9000004529953003
+            ],
+            "max": [
+              3.200000047683716,
+              1.1090000867843628,
+              1.940000057220459
+            ],
+            "size": [
+              6.400000095367432,
+              2.4390006065368652,
+              3.8400005102157593
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Existing educational schematic hardware; not a manufacturer-exact or mechanically certified model.",
+    "Fan speed is deliberately slowed for visual readability, not a claimed physical operating RPM.",
+    "No app/runtime files changed. Existing original static assets and manifests remain unchanged."
+  ]
+}

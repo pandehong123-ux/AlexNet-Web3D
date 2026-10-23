@@ -1,0 +1,307 @@
+[
+  {
+    "file": "compute-system-live.glb",
+    "scene": "ANIM-01-Compute-System",
+    "part_keys": [
+      "board",
+      "cpu",
+      "gpu",
+      "memory",
+      "network",
+      "shell"
+    ],
+    "rotors": [
+      {
+        "id": "compute-shell-fan-left",
+        "node_name": "GEO-Rotor-compute-shell-fan-left",
+        "part_key": "shell",
+        "source_hub": "GEO-Fan-hub",
+        "source_members": [
+          "GEO-Fan-hub",
+          "GEO-Swept-fan-blade",
+          "GEO-Swept-fan-blade.001",
+          "GEO-Swept-fan-blade.002",
+          "GEO-Swept-fan-blade.003",
+          "GEO-Swept-fan-blade.004",
+          "GEO-Swept-fan-blade.005",
+          "GEO-Swept-fan-blade.006",
+          "GEO-Swept-fan-blade.007",
+          "GEO-Swept-fan-blade.008"
+        ],
+        "pivot_part_local_xyz": [
+          -0.7800002098083496,
+          2.869999885559082,
+          2.1667896987764834e-07
+        ],
+        "pivot_asset_gltf_xyz": [
+          -4.380000114440918,
+          2.869999885559082,
+          -0.0
+        ],
+        "local_axis": "y",
+        "speed_rad_s": 4.71238898038469,
+        "frames": [
+          1,
+          9,
+          17,
+          25,
+          33
+        ],
+        "angles_degrees": [
+          0,
+          90,
+          180,
+          270,
+          360
+        ]
+      },
+      {
+        "id": "compute-shell-fan-right",
+        "node_name": "GEO-Rotor-compute-shell-fan-right",
+        "part_key": "shell",
+        "source_hub": "GEO-Fan-hub.001",
+        "source_members": [
+          "GEO-Fan-hub.001",
+          "GEO-Swept-fan-blade.009",
+          "GEO-Swept-fan-blade.010",
+          "GEO-Swept-fan-blade.011",
+          "GEO-Swept-fan-blade.012",
+          "GEO-Swept-fan-blade.013",
+          "GEO-Swept-fan-blade.014",
+          "GEO-Swept-fan-blade.015",
+          "GEO-Swept-fan-blade.016",
+          "GEO-Swept-fan-blade.017"
+        ],
+        "pivot_part_local_xyz": [
+          0.7799999713897705,
+          2.869999885559082,
+          2.1667896987764834e-07
+        ],
+        "pivot_asset_gltf_xyz": [
+          -2.819999933242798,
+          2.869999885559082,
+          -0.0
+        ],
+        "local_axis": "y",
+        "speed_rad_s": 4.71238898038469,
+        "frames": [
+          1,
+          9,
+          17,
+          25,
+          33
+        ],
+        "angles_degrees": [
+          0,
+          90,
+          180,
+          270,
+          360
+        ]
+      }
+    ],
+    "source_geometry_objects": 767,
+    "source_root": "GEO-match-assembly",
+    "budget": {
+      "bytes": 3145728,
+      "nodes": 18,
+      "triangles": 40000
+    },
+    "bytes": 1622548,
+    "sha256": "192b029f715f0d15f3bd9a8d61f0e659927b522a552a5b5ab518ed2012dfa0d4",
+    "nodes": 14,
+    "meshes": 8,
+    "materials": 15,
+    "vertices": 42608,
+    "triangles": 38236,
+    "primitives": 42,
+    "static_meshes": 6,
+    "rotor_count": 2,
+    "animation_clips": 1,
+    "clip_name": "ANIM-01-Compute-System",
+    "animation_tracks": [
+      {
+        "id": "compute-shell-fan-left",
+        "samples": 33,
+        "duration_seconds": 1.3333333730697632,
+        "rotation_degrees": 360.0000305175781,
+        "axis": "local y",
+        "speed_rad_s": 4.71238898038469,
+        "continuous_loop": true
+      },
+      {
+        "id": "compute-shell-fan-right",
+        "samples": 33,
+        "duration_seconds": 1.3333333730697632,
+        "rotation_degrees": 360.0000305175781,
+        "axis": "local y",
+        "speed_rad_s": 4.71238898038469,
+        "continuous_loop": true
+      }
+    ],
+    "checks": [
+      "GLB header/chunks/buffers",
+      "finite positions and valid triangle indices",
+      "unit normals and nonzero triangle areas",
+      "unchanged triangle count from original",
+      "same six/five top-level part keys",
+      "exact two isolated rotors per asset",
+      "hub-center pivots in correct parent",
+      "static shrouds/bearings/supports excluded",
+      "local-Y rotation only, full monotonic 360-degree loop",
+      "size/node/triangle budgets"
+    ]
+  },
+  {
+    "file": "accelerator-live.glb",
+    "scene": "ANIM-02-Accelerator",
+    "part_keys": [
+      "compute",
+      "fan",
+      "heatsink",
+      "pcb",
+      "vram"
+    ],
+    "rotors": [
+      {
+        "id": "accelerator-fan-fan-left",
+        "node_name": "GEO-Rotor-accelerator-fan-fan-left",
+        "part_key": "fan",
+        "source_hub": "GEO-Fan-hub.002",
+        "source_members": [
+          "GEO-Fan-hub.002",
+          "GEO-Swept-fan-blade.018",
+          "GEO-Swept-fan-blade.019",
+          "GEO-Swept-fan-blade.020",
+          "GEO-Swept-fan-blade.021",
+          "GEO-Swept-fan-blade.022",
+          "GEO-Swept-fan-blade.023",
+          "GEO-Swept-fan-blade.024",
+          "GEO-Swept-fan-blade.025",
+          "GEO-Swept-fan-blade.026"
+        ],
+        "pivot_part_local_xyz": [
+          -1.4300003051757812,
+          1.0499999523162842,
+          7.927279455088865e-08
+        ],
+        "pivot_asset_gltf_xyz": [
+          -1.4300003051757812,
+          1.0499999523162842,
+          -0.0
+        ],
+        "local_axis": "y",
+        "speed_rad_s": 4.71238898038469,
+        "frames": [
+          1,
+          9,
+          17,
+          25,
+          33
+        ],
+        "angles_degrees": [
+          0,
+          90,
+          180,
+          270,
+          360
+        ]
+      },
+      {
+        "id": "accelerator-fan-fan-right",
+        "node_name": "GEO-Rotor-accelerator-fan-fan-right",
+        "part_key": "fan",
+        "source_hub": "GEO-Fan-hub.003",
+        "source_members": [
+          "GEO-Fan-hub.003",
+          "GEO-Swept-fan-blade.027",
+          "GEO-Swept-fan-blade.028",
+          "GEO-Swept-fan-blade.029",
+          "GEO-Swept-fan-blade.030",
+          "GEO-Swept-fan-blade.031",
+          "GEO-Swept-fan-blade.032",
+          "GEO-Swept-fan-blade.033",
+          "GEO-Swept-fan-blade.034",
+          "GEO-Swept-fan-blade.035"
+        ],
+        "pivot_part_local_xyz": [
+          1.4300003051757812,
+          1.0499999523162842,
+          7.927279455088865e-08
+        ],
+        "pivot_asset_gltf_xyz": [
+          1.4300003051757812,
+          1.0499999523162842,
+          -0.0
+        ],
+        "local_axis": "y",
+        "speed_rad_s": 4.71238898038469,
+        "frames": [
+          1,
+          9,
+          17,
+          25,
+          33
+        ],
+        "angles_degrees": [
+          0,
+          90,
+          180,
+          270,
+          360
+        ]
+      }
+    ],
+    "source_geometry_objects": 420,
+    "source_root": "GEO-accelerator-assembly",
+    "budget": {
+      "bytes": 2097152,
+      "nodes": 16,
+      "triangles": 18000
+    },
+    "bytes": 740816,
+    "sha256": "5fa20bfc99048389576e3bb169088cc575caa2f349413e80c6a69ce8d65a368f",
+    "nodes": 12,
+    "meshes": 7,
+    "materials": 9,
+    "vertices": 20917,
+    "triangles": 15396,
+    "primitives": 20,
+    "static_meshes": 5,
+    "rotor_count": 2,
+    "animation_clips": 1,
+    "clip_name": "ANIM-02-Accelerator",
+    "animation_tracks": [
+      {
+        "id": "accelerator-fan-fan-left",
+        "samples": 33,
+        "duration_seconds": 1.3333333730697632,
+        "rotation_degrees": 360.0000305175781,
+        "axis": "local y",
+        "speed_rad_s": 4.71238898038469,
+        "continuous_loop": true
+      },
+      {
+        "id": "accelerator-fan-fan-right",
+        "samples": 33,
+        "duration_seconds": 1.3333333730697632,
+        "rotation_degrees": 360.0000305175781,
+        "axis": "local y",
+        "speed_rad_s": 4.71238898038469,
+        "continuous_loop": true
+      }
+    ],
+    "checks": [
+      "GLB header/chunks/buffers",
+      "finite positions and valid triangle indices",
+      "unit normals and nonzero triangle areas",
+      "unchanged triangle count from original",
+      "same six/five top-level part keys",
+      "exact two isolated rotors per asset",
+      "hub-center pivots in correct parent",
+      "static shrouds/bearings/supports excluded",
+      "local-Y rotation only, full monotonic 360-degree loop",
+      "size/node/triangle budgets"
+    ]
+  }
+]

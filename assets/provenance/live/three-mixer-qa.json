@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "three_revision": "180",
+  "contract": "Both GLB roots reparented to one THREE.Scene before new AnimationMixer(scene); both clips play using mixer.setTime(accumulatedTime).",
+  "unique_rotor_names": [
+    "GEO-Rotor-compute-shell-fan-left",
+    "GEO-Rotor-compute-shell-fan-right",
+    "GEO-Rotor-accelerator-fan-fan-left",
+    "GEO-Rotor-accelerator-fan-fan-right"
+  ],
+  "checks": [
+    {
+      "time_seconds": 0,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 0.113,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 0.3333333333333333,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 0.6666666666666666,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 1,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 1.3332333333333333,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 1.4463333333333332,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    },
+    {
+      "time_seconds": 13.446333333333332,
+      "all_four_local_y_rotors_correct": true,
+      "supports_fixed": true,
+      "pivots_fixed": true
+    }
+  ],
+  "shared_scene_tracks_unique": true,
+  "pause_resume_clock_verified": true,
+  "root_explosion_track_binding_verified": true,
+  "bounds_match_original_static_glbs": true,
+  "assets": [
+    {
+      "file": "compute-system-live.glb",
+      "clip": "ANIM-01-Compute-System",
+      "duration_seconds": 1.3333333730697632,
+      "tracks": [
+        "GEO-Rotor-compute-shell-fan-left.quaternion",
+        "GEO-Rotor-compute-shell-fan-right.quaternion"
+      ],
+      "bounds": {
+        "min": [
+          -5.3999998569488525,
+          -2.6050004959106445,
+          -2.90000057220459
+        ],
+        "max": [
+          6.900000095367432,
+          2.92900013923645,
+          2.90000057220459
+        ],
+        "size": [
+          12.299999952316284,
+          5.534000635147095,
+          5.80000114440918
+        ]
+      }
+    },
+    {
+      "file": "accelerator-live.glb",
+      "clip": "ANIM-02-Accelerator",
+      "duration_seconds": 1.3333333730697632,
+      "tracks": [
+        "GEO-Rotor-accelerator-fan-fan-left.quaternion",
+        "GEO-Rotor-accelerator-fan-fan-right.quaternion"
+      ],
+      "bounds": {
+        "min": [
+          -3.200000047683716,
+          -1.3300005197525024,
+          -1.9000004529953003
+        ],
+        "max": [
+          3.200000047683716,
+          1.1090000867843628,
+          1.940000057220459
+        ],
+        "size": [
+          6.400000095367432,
+          2.4390006065368652,
+          3.8400005102157593
+        ]
+      }
+    }
+  ]
+}

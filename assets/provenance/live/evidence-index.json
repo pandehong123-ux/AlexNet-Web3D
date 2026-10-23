@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "source": "output/live-blender/rotors-contact-sheet.png",
+      "path": "assets/provenance/live/rotors-contact-sheet.png",
+      "bytes": 487190,
+      "sha256": "cf281d755b5f9c6403de4be22cc0f859122d120bce6945ec325fcf69fab38ebc"
+    },
+    {
+      "source": "output/live-blender/compute-contact-sheet.png",
+      "path": "assets/provenance/live/compute-contact-sheet.png",
+      "bytes": 165354,
+      "sha256": "3e552114df98b857dd735c731ada8f5c70676dea8405e3b2df2009af516765e7"
+    },
+    {
+      "source": "output/live-blender/accelerator-contact-sheet.png",
+      "path": "assets/provenance/live/accelerator-contact-sheet.png",
+      "bytes": 321343,
+      "sha256": "4b033aa254c0b826e3e567622ed34d72b9aae33214391eb7871cbfa688bf8775"
+    },
+    {
+      "source": "output/live-blender/glb-validation.json",
+      "path": "assets/provenance/live/glb-validation.json",
+      "bytes": 8366,
+      "sha256": "df49a54814c11a4f4828c3c697cd67ff4e0ed53d3181651beae5b26229ae59d2"
+    },
+    {
+      "source": "output/live-blender/three-mixer-qa.json",
+      "path": "assets/provenance/live/three-mixer-qa.json",
+      "bytes": 3127,
+      "sha256": "d6a1f6a126b4e46b22fcaf844b2d313e60c805afd93904af3155ca835f0ab653"
+    },
+    {
+      "source": "output/live-blender/source-blend-qa.json",
+      "path": "assets/provenance/live/source-blend-qa.json",
+      "bytes": 1112,
+      "sha256": "363576e6e59bcf2521fcbefa82f6cefa8587ff772cfb7a076b0ccb5564285739"
+    },
+    {
+      "source": "output/live-blender/source-reopen-qa.json",
+      "path": "assets/provenance/live/source-reopen-qa.json",
+      "bytes": 310,
+      "sha256": "b4fd19a07d800e8c08b6b4d227c2945912ab3d4336b7bf084ae6e0eb34d8287e"
+    },
+    {
+      "source": "output/live-blender/animation-render-report.json",
+      "path": "assets/provenance/live/animation-render-report.json",
+      "bytes": 2542,
+      "sha256": "7a93e842b5735c8d27987d9050fad130244b661b5180cef232f4e5cadb05db76"
+    },
+    {
+      "source": "output/live-browser/qa.json",
+      "path": "assets/provenance/live/browser-live-qa.json",
+      "bytes": 5037,
+      "sha256": "0aa854d72359258c61c027efe31b88648a294311e5e0905275befefd8f74491a"
+    },
+    {
+      "source": "output/engineering-qa.json",
+      "path": "assets/provenance/live/browser-layout-qa.json",
+      "bytes": 20395,
+      "sha256": "11ab0cff4cfc3c2e951047c95b25d8ac4b9a794784aefe5cc1b5b89807909d94"
+    },
+    {
+      "source": "output/lifecycle-qa.json",
+      "path": "assets/provenance/live/browser-lifecycle-qa.json",
+      "bytes": 385,
+      "sha256": "24d8cceeb2647baa13a8779eec4148a2e4a651df7a2402673bf52d5da88c4463"
+    },
+    {
+      "source": "output/curated-qa.json",
+      "path": "assets/provenance/live/browser-history-qa.json",
+      "bytes": 1641,
+      "sha256": "f424157b2861a0c7e817247973393320eacf6bcf27add6671c9813319a7cbcf6"
+    },
+    {
+      "source": "output/professional-qa.json",
+      "path": "assets/provenance/live/browser-network-qa.json",
+      "bytes": 1444,
+      "sha256": "78935d5e5a504163efd8f85c7a7d9d1f41e4306e0f1c7758c95347314560caca"
+    }
+  ]
+}

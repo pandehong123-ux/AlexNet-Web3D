@@ -1,0 +1,918 @@
+{
+  "checks": [
+    {
+      "name": "01真实Blender资产加载",
+      "passed": true
+    },
+    {
+      "name": "match部件数量",
+      "passed": true
+    },
+    {
+      "name": "match所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 shell/cpu",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 shell/gpu",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 shell/memory",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 shell/network",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 shell/board",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 cpu/gpu",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 cpu/memory",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 cpu/network",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 cpu/board",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 gpu/memory",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 gpu/network",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 gpu/board",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 memory/network",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 memory/board",
+      "passed": true
+    },
+    {
+      "name": "match投影不重叠 network/board",
+      "passed": true
+    },
+    {
+      "name": "match空间标记点击 shell",
+      "passed": true
+    },
+    {
+      "name": "match空间标记点击 cpu",
+      "passed": true
+    },
+    {
+      "name": "match空间标记点击 gpu",
+      "passed": true
+    },
+    {
+      "name": "match空间标记点击 memory",
+      "passed": true
+    },
+    {
+      "name": "match空间标记点击 network",
+      "passed": true
+    },
+    {
+      "name": "match空间标记点击 board",
+      "passed": true
+    },
+    {
+      "name": "match真实网格点击联动说明",
+      "passed": true
+    },
+    {
+      "name": "match旋转后部件数量",
+      "passed": true
+    },
+    {
+      "name": "match旋转后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 shell/cpu",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 shell/gpu",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 shell/memory",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 shell/network",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 shell/board",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 cpu/gpu",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 cpu/memory",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 cpu/network",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 cpu/board",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 gpu/memory",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 gpu/network",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 gpu/board",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 memory/network",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 memory/board",
+      "passed": true
+    },
+    {
+      "name": "match旋转后投影不重叠 network/board",
+      "passed": true
+    },
+    {
+      "name": "match单件显示",
+      "passed": true
+    },
+    {
+      "name": "match单件切换同步",
+      "passed": true
+    },
+    {
+      "name": "match整理后部件数量",
+      "passed": true
+    },
+    {
+      "name": "match整理后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 shell/cpu",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 shell/gpu",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 shell/memory",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 shell/network",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 shell/board",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 cpu/gpu",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 cpu/memory",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 cpu/network",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 cpu/board",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 gpu/memory",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 gpu/network",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 gpu/board",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 memory/network",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 memory/board",
+      "passed": true
+    },
+    {
+      "name": "match整理后投影不重叠 network/board",
+      "passed": true
+    },
+    {
+      "name": "match恢复完整模型",
+      "passed": true
+    },
+    {
+      "name": "gpu部件数量",
+      "passed": true
+    },
+    {
+      "name": "gpu所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 pcb/compute",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 pcb/vram",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 pcb/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 pcb/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 compute/vram",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 compute/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 compute/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 vram/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 vram/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu投影不重叠 heatsink/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu空间标记点击 pcb",
+      "passed": true
+    },
+    {
+      "name": "gpu空间标记点击 compute",
+      "passed": true
+    },
+    {
+      "name": "gpu空间标记点击 vram",
+      "passed": true
+    },
+    {
+      "name": "gpu空间标记点击 heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu空间标记点击 fan",
+      "passed": true
+    },
+    {
+      "name": "gpu真实网格点击联动说明",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后部件数量",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 pcb/compute",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 pcb/vram",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 pcb/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 pcb/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 compute/vram",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 compute/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 compute/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 vram/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 vram/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu旋转后投影不重叠 heatsink/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu单件显示",
+      "passed": true
+    },
+    {
+      "name": "gpu单件切换同步",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后部件数量",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 pcb/compute",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 pcb/vram",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 pcb/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 pcb/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 compute/vram",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 compute/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 compute/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 vram/heatsink",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 vram/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu整理后投影不重叠 heatsink/fan",
+      "passed": true
+    },
+    {
+      "name": "gpu恢复完整模型",
+      "passed": true
+    },
+    {
+      "name": "training部件数量",
+      "passed": true
+    },
+    {
+      "name": "training所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 sample/forward",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 sample/loss",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 sample/gradient",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 sample/update",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 forward/loss",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 forward/gradient",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 forward/update",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 loss/gradient",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 loss/update",
+      "passed": true
+    },
+    {
+      "name": "training投影不重叠 gradient/update",
+      "passed": true
+    },
+    {
+      "name": "training空间标记点击 sample",
+      "passed": true
+    },
+    {
+      "name": "training空间标记点击 forward",
+      "passed": true
+    },
+    {
+      "name": "training空间标记点击 loss",
+      "passed": true
+    },
+    {
+      "name": "training空间标记点击 gradient",
+      "passed": true
+    },
+    {
+      "name": "training空间标记点击 update",
+      "passed": true
+    },
+    {
+      "name": "training真实网格点击联动说明",
+      "passed": true
+    },
+    {
+      "name": "training旋转后部件数量",
+      "passed": true
+    },
+    {
+      "name": "training旋转后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 sample/forward",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 sample/loss",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 sample/gradient",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 sample/update",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 forward/loss",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 forward/gradient",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 forward/update",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 loss/gradient",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 loss/update",
+      "passed": true
+    },
+    {
+      "name": "training旋转后投影不重叠 gradient/update",
+      "passed": true
+    },
+    {
+      "name": "training单件显示",
+      "passed": true
+    },
+    {
+      "name": "training单件切换同步",
+      "passed": true
+    },
+    {
+      "name": "training整理后部件数量",
+      "passed": true
+    },
+    {
+      "name": "training整理后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 sample/forward",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 sample/loss",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 sample/gradient",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 sample/update",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 forward/loss",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 forward/gradient",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 forward/update",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 loss/gradient",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 loss/update",
+      "passed": true
+    },
+    {
+      "name": "training整理后投影不重叠 gradient/update",
+      "passed": true
+    },
+    {
+      "name": "training恢复完整模型",
+      "passed": true
+    },
+    {
+      "name": "selfplay部件数量",
+      "passed": true
+    },
+    {
+      "name": "selfplay所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 policyA/board",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 policyA/policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 policyA/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 policyA/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 board/policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 board/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 board/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 policyB/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 policyB/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay投影不重叠 experience/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay空间标记点击 policyA",
+      "passed": true
+    },
+    {
+      "name": "selfplay空间标记点击 board",
+      "passed": true
+    },
+    {
+      "name": "selfplay空间标记点击 policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay空间标记点击 experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay空间标记点击 evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay真实网格点击联动说明",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后部件数量",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 policyA/board",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 policyA/policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 policyA/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 policyA/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 board/policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 board/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 board/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 policyB/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 policyB/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay旋转后投影不重叠 experience/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay单件显示",
+      "passed": true
+    },
+    {
+      "name": "selfplay单件切换同步",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后部件数量",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 policyA/board",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 policyA/policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 policyA/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 policyA/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 board/policyB",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 board/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 board/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 policyB/experience",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 policyB/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay整理后投影不重叠 experience/evaluation",
+      "passed": true
+    },
+    {
+      "name": "selfplay恢复完整模型",
+      "passed": true
+    },
+    {
+      "name": "手机match部件数量",
+      "passed": true
+    },
+    {
+      "name": "手机match所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 shell/cpu",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 shell/gpu",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 shell/memory",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 shell/network",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 shell/board",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 cpu/gpu",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 cpu/memory",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 cpu/network",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 cpu/board",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 gpu/memory",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 gpu/network",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 gpu/board",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 memory/network",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 memory/board",
+      "passed": true
+    },
+    {
+      "name": "手机match投影不重叠 network/board",
+      "passed": true
+    },
+    {
+      "name": "手机无横向溢出 match",
+      "passed": true
+    },
+    {
+      "name": "手机growth部件数量",
+      "passed": true
+    },
+    {
+      "name": "手机growth所有部件完整入画",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 pcb/compute",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 pcb/vram",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 pcb/heatsink",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 pcb/fan",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 compute/vram",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 compute/heatsink",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 compute/fan",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 vram/heatsink",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 vram/fan",
+      "passed": true
+    },
+    {
+      "name": "手机growth投影不重叠 heatsink/fan",
+      "passed": true
+    },
+    {
+      "name": "手机无横向溢出 growth",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "renderer": "Edge SwiftShader; geometry and interaction validation, not hardware performance"
+}

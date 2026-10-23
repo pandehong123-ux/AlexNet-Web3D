@@ -1,0 +1,84 @@
+{
+  "testedAt": "2026-10-23T06:17:17.773Z",
+  "version": "历史主展区与策展视觉",
+  "renderer": "Edge + SwiftShader software",
+  "checks": [
+    {
+      "name": "六个完整历史章节",
+      "passed": true
+    },
+    {
+      "name": "至少十九个历史事件",
+      "passed": true
+    },
+    {
+      "name": "四种原理展品",
+      "passed": true
+    },
+    {
+      "name": "历史有真实三维画布",
+      "passed": true
+    },
+    {
+      "name": "历史展品可拆解",
+      "passed": true
+    },
+    {
+      "name": "rules模型正常显示",
+      "passed": true
+    },
+    {
+      "name": "search模型正常显示",
+      "passed": true
+    },
+    {
+      "name": "learning模型正常显示",
+      "passed": true
+    },
+    {
+      "name": "最后一章联动",
+      "passed": true
+    },
+    {
+      "name": "最后一章不再灰度",
+      "passed": true
+    },
+    {
+      "name": "历史正文含低谷与樊麾",
+      "passed": true
+    },
+    {
+      "name": "章节映射规则展品",
+      "passed": true
+    },
+    {
+      "name": "历史恢复同一场景",
+      "passed": true
+    },
+    {
+      "name": "手机origins无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "手机match无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "手机decision无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "手机dimensions无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "手机growth无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "手机experiments无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
