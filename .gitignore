@@ -6,6 +6,9 @@ coverage/
 .playwright-cli/
 test-results/
 playwright-report/
+__pycache__/
+*.py[cod]
+*.blend1
 
 # Local settings, credentials, and logs
 .env

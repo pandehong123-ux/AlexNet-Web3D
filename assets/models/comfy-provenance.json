@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "title": "学习之核 / Learning Core",
+  "status": "generated_and_validated",
+  "recorded_utc": "2026-10-23T04:12:23.958640+00:00",
+  "purpose": "Single original abstract decorative exhibit for an AI museum free-roam hall",
+  "generator": {
+    "service": "ComfyUI",
+    "endpoint": "http://127.0.0.1:8188",
+    "version": "0.42.1",
+    "server_reused": true,
+    "startup_flags_observed": [
+      "--listen",
+      "127.0.0.1",
+      "--port",
+      "8188",
+      "--lowvram"
+    ],
+    "model": "hunyuan3d-dit-v2_fp16.safetensors",
+    "model_path": "D:\\Blender-Web3D\\.local\\ComfyUI-0.42.1\\models\\checkpoints\\hunyuan3d-dit-v2_fp16.safetensors",
+    "model_bytes": 4928151562,
+    "model_metadata": {},
+    "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM",
+    "remote_services": false,
+    "paid_services": false,
+    "packages_installed": false
+  },
+  "reference": {
+    "path": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\learning-core-input.png",
+    "sha256": "89a6d0522e760facb42fd3218174147f1fc435b23414ada8dfe812bc58acccca",
+    "creation_script": "tools/comfy/create_reference.py",
+    "method": "Original local Blender sculpture reference render, Pillow-composited onto pure white; reference geometry is discarded and is not the delivered mesh.",
+    "user_files_used": false
+  },
+  "inference": {
+    "seed": 2026102307,
+    "successful_attempt": 1,
+    "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+    "parameters": {
+      "latent_resolution": 2048,
+      "steps": 16,
+      "cfg": 5.5,
+      "octree_resolution": 128,
+      "num_chunks": 1000
+    },
+    "workflow": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\attempt-1.api.json",
+    "ui_workflow": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\learning-core.workflow.json",
+    "workflow_sha256": "9c8d318d91c0d63508a319a11a2c1711138fb47280bb9e79993bad82679b14ac",
+    "history": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\attempt-1-history.json",
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+            "timestamp": 1792727996234
+          }
+        ],
+        [
+          "execution_cached",
+          {
+            "nodes": [],
+            "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+            "timestamp": 1792727996245
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+            "timestamp": 1792728019357
+          }
+        ]
+      ]
+    },
+    "cached_nodes": [
+      []
+    ],
+    "raw_glb": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\hunyuan-raw.glb",
+    "raw_sha256": "599b7fb329661384a63da0fc3010f18cfecd0c28524a5eec65d73027d85f0faa",
+    "raw_embedded_prompt_matches_submitted_graph": true,
+    "attempts": [
+      {
+        "attempt": 1,
+        "workflow": "attempt-1.api.json",
+        "workflow_sha256": "9c8d318d91c0d63508a319a11a2c1711138fb47280bb9e79993bad82679b14ac",
+        "parameters": {
+          "latent_resolution": 2048,
+          "steps": 16,
+          "cfg": 5.5,
+          "octree_resolution": 128,
+          "num_chunks": 1000
+        },
+        "status": "success",
+        "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+        "execution_status": {
+          "status_str": "success",
+          "completed": true,
+          "messages": [
+            [
+              "execution_start",
+              {
+                "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+                "timestamp": 1792727996234
+              }
+            ],
+            [
+              "execution_cached",
+              {
+                "nodes": [],
+                "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+                "timestamp": 1792727996245
+              }
+            ],
+            [
+              "execution_success",
+              {
+                "prompt_id": "c3577c14-5f39-452d-8a9e-f146392af812",
+                "timestamp": 1792728019357
+              }
+            ]
+          ]
+        },
+        "raw_validation": {
+          "magic": "glTF",
+          "version": 2,
+          "declared_bytes": 970304,
+          "actual_bytes": 970304,
+          "meshes": 1,
+          "vertices": 26714,
+          "triangles": 53940,
+          "sha256": "599b7fb329661384a63da0fc3010f18cfecd0c28524a5eec65d73027d85f0faa"
+        },
+        "server_output": {
+          "filename": "attempt-1_00001_.glb",
+          "subfolder": "comfy-learning-core-20261023",
+          "type": "output"
+        },
+        "elapsed_seconds": 25.09
+      }
+    ]
+  },
+  "postprocess": {
+    "script": "tools/comfy/finish_sculpture.py",
+    "operations": [
+      "weld within 1e-5 raw units",
+      "remove degenerate edges and tiny debris if present",
+      "one 0.012 raw-unit voxel cleanup",
+      "gentle surface smoothing, factor 0.3, 3 iterations",
+      "decimate to at most 28000 triangles",
+      "continuous artistic vertex-color palette and one PBR material",
+      "uniformly scale to height 2.2 m; bottom-center origin; Y-up GLB export"
+    ],
+    "report": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\finish-report.json",
+    "geometry_replaced_with_procedural_design": false
+  },
+  "result": {
+    "path": "D:\\新建文件夹 (2)\\AlexNet\\assets\\models\\learning-sculpture.glb",
+    "sha256": "52fecf2b707fe43de732d9668938d37328268863739081c5bdaba362ad567faf",
+    "magic": "glTF",
+    "version": 2,
+    "declared_bytes": 673256,
+    "actual_bytes": 673256,
+    "meshes": 1,
+    "vertices": 13995,
+    "triangles": 27998,
+    "bounds_xyz_m": [
+      [
+        -1.2401819229125977,
+        0.0,
+        -0.31103506684303284
+      ],
+      [
+        1.2401819229125977,
+        2.200000047683716,
+        0.31103506684303284
+      ]
+    ],
+    "dimensions_xyz_m": [
+      2.4803638458251953,
+      2.200000047683716,
+      0.6220701336860657
+    ],
+    "axis_up": "+Y",
+    "origin": "bounding-box bottom center",
+    "mesh_objects": 1,
+    "primitives": 1,
+    "materials": 1,
+    "textures": 0,
+    "normal_attribute": true,
+    "vertex_color_attribute": true,
+    "external_dependencies": [],
+    "degenerate_triangles": 0,
+    "welded_topology": {
+      "unique_vertices": 13995,
+      "components": 1,
+      "component_vertices": [
+        13995
+      ],
+      "boundary_edges": 0,
+      "edges_with_more_than_two_faces": 0
+    },
+    "checks_passed": [
+      "GLB magic/version/length/chunk bounds",
+      "finite vertex data",
+      "triangle indices in range",
+      "nondegenerate triangles",
+      "unit normals",
+      "single mesh/node/material",
+      "COLOR_0 palette",
+      "no external assets"
+    ],
+    "distance_to_normalized_raw_vertices_m": {
+      "mean": 0.006085236174084597,
+      "p95": 0.010628107076659348,
+      "max": 0.01871824378810713,
+      "method": "nearest raw vertex, not exact point-to-surface distance or scientific fidelity validation"
+    },
+    "raw_embedded_prompt_matches_submitted_graph": true,
+    "raw_embedded_prompt_comparison": "Identical node classes and inputs; runtime LoadImage.is_changed verified separately",
+    "raw_embedded_image_fingerprint_matches_input_sha256": true
+  },
+  "materials": [
+    {
+      "name": "MAT-Satin-Ceramic-Learning-Palette",
+      "metallic": 0.28,
+      "roughness": 0.28,
+      "base_color": "glTF COLOR_0 vertex palette",
+      "textures": 0,
+      "palette_linear_rgb": {
+        "porcelain": [
+          0.7300000190734863,
+          0.8399999737739563,
+          0.8700000047683716
+        ],
+        "teal": [
+          0.02500000037252903,
+          0.2800000011920929,
+          0.3400000035762787
+        ],
+        "champagne": [
+          0.6600000262260437,
+          0.4000000059604645,
+          0.1599999964237213
+        ]
+      }
+    }
+  ],
+  "axes": {
+    "glTF": "+Y up, +X right, +Z front",
+    "Blender": "+Z up, -Y front",
+    "origin": "base/bounding-box bottom center at (0,0,0)"
+  },
+  "validation": {
+    "buffer_and_topology_report": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\glb-validation.json",
+    "blender_glb_reimport": {
+      "mesh_objects": 1,
+      "materials": 1,
+      "dimensions_blender_xyz_m": [
+        2.4803638458251953,
+        0.6220701336860657,
+        2.200000047683716
+      ],
+      "topology": {
+        "vertices": 13995,
+        "edges": 41997,
+        "triangles": 27998,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "component_vertex_counts": [
+          13995
+        ]
+      }
+    },
+    "visual_review": "Agent inspected exported-GLB front, three-quarter and back renders: three rounded open leaf loops join a central core; the cleaned surface has continuous white/teal/champagne shading and visible depth. The back is inferred, and slight organic asymmetry remains.",
+    "previews": [
+      "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\final-front.png",
+      "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\final-three-quarter.png",
+      "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\final-back.png",
+      "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\contact-sheet.jpg"
+    ]
+  },
+  "limitations": [
+    "Original abstract decorative artwork, not hardware, anatomy, or a precise scientific model.",
+    "Single-image generation infers depth and unseen surfaces; no exact three-leaf symmetry guarantee.",
+    "Only geometry comes from Hunyuan3D. The white/teal/champagne vertex palette and PBR material are local artistic postprocessing, not learned textures.",
+    "Raw surface-net output had 5 boundary edges and 721 non-manifold edges. One voxel cleanup and decimation were applied; raw GLB is preserved unchanged.",
+    "Finished topology passes connectedness, two-face edge incidence, normals and GLB roundtrip checks; self-intersections, collisions, structural strength and printability are not certified.",
+    "CPU Cycles previews use studio lighting. Appearance in the museum depends on its renderer and environment.",
+    "No webpage integration or roaming/collision behavior was changed or tested."
+  ],
+  "scope": {
+    "allowed_outputs": [
+      "tools/comfy/",
+      "assets/models/learning-sculpture.glb",
+      "assets/models/comfy-provenance.json",
+      "output/comfy-*/"
+    ],
+    "installation_settings_or_model_files_modified": false,
+    "runtime_service_files": "Unique reference upload in ComfyUI input; SaveGLB output under ComfyUI output/comfy-learning-core-20261023. Downloaded through /view into project evidence directory.",
+    "git_committed": false,
+    "webpage_sources_modified": false
+  },
+  "reproducibility": {
+    "readme": "D:\\新建文件夹 (2)\\AlexNet\\tools\\comfy\\README.md",
+    "scripts_sha256": {
+      "create_reference.py": "34cddd4c26b0e3248a1ddd8967ec5cb741fc79128b84aabc82b34c40e1100bc2",
+      "finish_sculpture.py": "23625a2dee98c3a9b236c53abdf3b864b87274ae58521a3f0c1b04ae3f3b47de",
+      "make_ui_workflow.py": "5b61ed04cc56b6103a4192d1e2c513b70e38ffc9aa62a08b648b422dcdfc49b1",
+      "run_local.py": "f17d3d25291b52417ebbbe375147a3660caad7174835100865a3d0c9d01d48d8",
+      "validate_and_record.py": "6d03bb4bff269806f03d143d42b275bfd712405124f8709dc54130d530bcefd1"
+    },
+    "ui_workflow_sha256": "fd85e66af547d44a6ec5e03b76819dc262b1c8fecf79a6d8cd7d704f7e8b2126"
+  }
+}

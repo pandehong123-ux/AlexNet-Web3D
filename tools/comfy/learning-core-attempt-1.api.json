@@ -1,0 +1,117 @@
+{
+  "2": {
+    "class_type": "ImageOnlyCheckpointLoader",
+    "inputs": {
+      "ckpt_name": "hunyuan3d-dit-v2_fp16.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "learning-core-89a6d0522e760fac.png"
+    }
+  },
+  "4": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "shift": 1.0,
+      "model": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPVisionEncode",
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "2",
+        1
+      ],
+      "image": [
+        "3",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentHunyuan3Dv2",
+    "inputs": {
+      "resolution": 2048,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "Hunyuan3Dv2Conditioning",
+    "inputs": {
+      "clip_vision_output": [
+        "5",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 2026102307,
+      "steps": 16,
+      "cfg": 5.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "7",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "VAEDecodeHunyuan3D",
+    "inputs": {
+      "num_chunks": 1000,
+      "octree_resolution": 128,
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "2",
+        2
+      ]
+    }
+  },
+  "10": {
+    "class_type": "VoxelToMesh",
+    "inputs": {
+      "algorithm": "surface net",
+      "threshold": 0.6,
+      "voxel": [
+        "9",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "SaveGLB",
+    "inputs": {
+      "filename_prefix": "comfy-learning-core-20261023/attempt-1",
+      "mesh": [
+        "10",
+        0
+      ]
+    }
+  }
+}

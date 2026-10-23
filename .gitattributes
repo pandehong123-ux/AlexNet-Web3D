@@ -6,10 +6,17 @@
 *.cjs text eol=lf
 *.json text eol=lf
 *.md text eol=lf
+*.py text eol=lf
 *.bat text eol=crlf
 *.png binary
 *.jpg binary
 *.webp binary
+*.glb binary
+*.blend binary
+# Preserve the bytes of signed generation evidence across Windows/Linux checkouts.
+assets/provenance/* -text whitespace=cr-at-eol
+assets/models/comfy-provenance.json -text whitespace=cr-at-eol
+assets/models/engineering-manifest.json -text whitespace=cr-at-eol
 # Third-party shader strings inside the generated offline bundle preserve whitespace.
 script.js -whitespace
 .gitattributes text eol=lf

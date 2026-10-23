@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "node_version": "v20.18.0",
+  "isolated_files": [
+    "tests/model-assets.test.mjs",
+    "assets/provenance/evidence-index.json",
+    "assets/models/engineering-manifest.json",
+    "assets/models/comfy-provenance.json",
+    "assets/models/compute-system.glb",
+    "assets/models/accelerator.glb",
+    "assets/models/learning-sculpture.glb",
+    "assets/models/ai-museum-engineering-v002.blend",
+    "assets/provenance/engineering-task-only.blend",
+    "assets/provenance/rack-final-qa.png",
+    "assets/provenance/accelerator-final-qa.png",
+    "assets/provenance/comfy-input.png",
+    "assets/provenance/comfy-hunyuan-raw.glb",
+    "assets/provenance/comfy-executed.api.json"
+  ],
+  "archive_files": 6,
+  "archive_bytes": 10433849,
+  "output_directory_present": false,
+  "node_modules_present": false,
+  "fixture_bytes": 14006778,
+  "positive": {
+    "exit_code": 0,
+    "tests": 9,
+    "passed": 9,
+    "failed": 0,
+    "output": "TAP version 13\n# Subtest: compute-system.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\nok 1 - compute-system.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\n  ---\n  duration_ms: 134.3463\n  ...\n# Subtest: accelerator.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\nok 2 - accelerator.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\n  ---\n  duration_ms: 65.4064\n  ...\n# Subtest: learning-sculpture.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\nok 3 - learning-sculpture.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\n  ---\n  duration_ms: 83.0047\n  ...\n# Subtest: engineering exports retain the six rack/board parts and five accelerator parts\nok 4 - engineering exports retain the six rack/board parts and five accelerator parts\n  ---\n  duration_ms: 164.6819\n  ...\n# Subtest: task-only BLEND has valid BHeads/SDNA, actual scene/object IDs, and no startup Cube\nok 5 - task-only BLEND has valid BHeads/SDNA, actual scene/object IDs, and no startup Cube\n  ---\n  duration_ms: 57.8261\n  ...\n# Subtest: initial Cube scene and original engineering/sculpture assets remain protected\nok 6 - initial Cube scene and original engineering/sculpture assets remain protected\n  ---\n  duration_ms: 7.1094\n  ...\n# Subtest: sculpture remains one colored PBR object with Y-up bottom origin and closed topology\nok 7 - sculpture remains one colored PBR object with Y-up bottom origin and closed topology\n  ---\n  duration_ms: 130.8501\n  ...\n# Subtest: Comfy provenance verifies real local inference, input/workflow hashes and raw GLB metadata\nok 8 - Comfy provenance verifies real local inference, input/workflow hashes and raw GLB metadata\n  ---\n  duration_ms: 37.4865\n  ...\n# Subtest: persistent rack/accelerator PNG renders have recorded hashes and completed visual review\nok 9 - persistent rack/accelerator PNG renders have recorded hashes and completed visual review\n  ---\n  duration_ms: 15.7283\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 810.6746\n"
+  },
+  "missing_archive_negative_control": {
+    "exit_code": 1,
+    "tests": 9,
+    "passed": 0,
+    "failed": 1,
+    "output": "TAP version 13\n# Subtest: compute-system.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\nok 1 - compute-system.glb: GLB buffers, indices, normals, hierarchy and recorded budgets # SKIP test name does not match pattern\n  ---\n  duration_ms: 1.167\n  ...\n# Subtest: accelerator.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\nok 2 - accelerator.glb: GLB buffers, indices, normals, hierarchy and recorded budgets # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.0935\n  ...\n# Subtest: learning-sculpture.glb: GLB buffers, indices, normals, hierarchy and recorded budgets\nok 3 - learning-sculpture.glb: GLB buffers, indices, normals, hierarchy and recorded budgets # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.0877\n  ...\n# Subtest: engineering exports retain the six rack/board parts and five accelerator parts\nok 4 - engineering exports retain the six rack/board parts and five accelerator parts # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.0819\n  ...\n# Subtest: task-only BLEND has valid BHeads/SDNA, actual scene/object IDs, and no startup Cube\nok 5 - task-only BLEND has valid BHeads/SDNA, actual scene/object IDs, and no startup Cube # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.0892\n  ...\n# Subtest: initial Cube scene and original engineering/sculpture assets remain protected\nok 6 - initial Cube scene and original engineering/sculpture assets remain protected # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.7748\n  ...\n# Subtest: sculpture remains one colored PBR object with Y-up bottom origin and closed topology\nok 7 - sculpture remains one colored PBR object with Y-up bottom origin and closed topology # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.1815\n  ...\n# Subtest: Comfy provenance verifies real local inference, input/workflow hashes and raw GLB metadata\nnot ok 8 - Comfy provenance verifies real local inference, input/workflow hashes and raw GLB metadata\n  ---\n  duration_ms: 1.3515\n  location: 'C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\alexnet-asset-qa-9Xtt7P\\\\tests\\\\model-assets.test.mjs:318:1'\n  failureType: 'testCodeFailure'\n  error: \"ENOENT: no such file or directory, open 'C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\alexnet-asset-qa-9Xtt7P\\\\assets\\\\provenance\\\\comfy-input.png'\"\n  code: 'ENOENT'\n  stack: |-\n    Object.openSync (node:fs:573:18)\n    readFileSync (node:fs:452:35)\n    read (file:///C:/Users/Admin/AppData/Local/Temp/alexnet-asset-qa-9Xtt7P/tests/model-assets.test.mjs:27:16)\n    TestContext.<anonymous> (file:///C:/Users/Admin/AppData/Local/Temp/alexnet-asset-qa-9Xtt7P/tests/model-assets.test.mjs:330:21)\n    Test.runInAsyncScope (node:async_hooks:206:9)\n    Test.run (node:internal/test_runner/test:796:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:527:18)\n    Test.postRun (node:internal/test_runner/test:889:19)\n    Test.run (node:internal/test_runner/test:835:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:527:7)\n  ...\n# Subtest: persistent rack/accelerator PNG renders have recorded hashes and completed visual review\nok 9 - persistent rack/accelerator PNG renders have recorded hashes and completed visual review # SKIP test name does not match pattern\n  ---\n  duration_ms: 0.1707\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 8\n# todo 0\n# duration_ms 90.8038\n"
+  },
+  "historical_record_hashes_unchanged": {
+    "assets/models/engineering-manifest.json": "66a3dd3314601c6372c8d7f30c750a30f7821230ef659f440e89b6e85761942a",
+    "assets/models/comfy-provenance.json": "8ca71a2fe22e38724a77fe072d8ee6c9f8e49a64e15ab1e11d4ac028bad8ab9d"
+  },
+  "status": "passed",
+  "temporary_directory_removed": true
+}

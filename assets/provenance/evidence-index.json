@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "description": "Portable byte-identical aliases for original evidence paths. Historical manifest and provenance are unchanged.",
+  "paths": {
+    "output/blender/ai-museum-engineering-final-qa.blend": "assets/provenance/engineering-task-only.blend",
+    "output/blender/rack-final-qa.png": "assets/provenance/rack-final-qa.png",
+    "output/blender/accelerator-final-qa.png": "assets/provenance/accelerator-final-qa.png",
+    "D:/新建文件夹 (2)/AlexNet/output/comfy-learning-core-20261023/learning-core-input.png": "assets/provenance/comfy-input.png",
+    "D:/新建文件夹 (2)/AlexNet/output/comfy-learning-core-20261023/hunyuan-raw.glb": "assets/provenance/comfy-hunyuan-raw.glb",
+    "D:/新建文件夹 (2)/AlexNet/output/comfy-learning-core-20261023/attempt-1.api.json": "assets/provenance/comfy-executed.api.json"
+  },
+  "files": [
+    {
+      "path": "assets/provenance/engineering-task-only.blend",
+      "original_recorded_path": "output/blender/ai-museum-engineering-final-qa.blend",
+      "role": "Task-only Blender source",
+      "bytes": 7031091,
+      "sha256": "c4a015434a99cc94dae8535d83f3c909e1cda01dcfa5b011c3063238a3f10573"
+    },
+    {
+      "path": "assets/provenance/rack-final-qa.png",
+      "original_recorded_path": "output/blender/rack-final-qa.png",
+      "role": "Rack visual QA render",
+      "bytes": 1153257,
+      "sha256": "698b57462ff5525814a975c4ff18921446f9c380e7b29cb9482d0928cf11f492"
+    },
+    {
+      "path": "assets/provenance/accelerator-final-qa.png",
+      "original_recorded_path": "output/blender/accelerator-final-qa.png",
+      "role": "Accelerator visual QA render",
+      "bytes": 1141096,
+      "sha256": "3f78e93910a362bb7bfddad9409be3b852c4b2ee0e1c93f65e50bdb5a223b224"
+    },
+    {
+      "path": "assets/provenance/comfy-input.png",
+      "original_recorded_path": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\learning-core-input.png",
+      "role": "Original white-background input",
+      "bytes": 136103,
+      "sha256": "89a6d0522e760facb42fd3218174147f1fc435b23414ada8dfe812bc58acccca"
+    },
+    {
+      "path": "assets/provenance/comfy-hunyuan-raw.glb",
+      "original_recorded_path": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\hunyuan-raw.glb",
+      "role": "Unmodified real Hunyuan3D output",
+      "bytes": 970304,
+      "sha256": "599b7fb329661384a63da0fc3010f18cfecd0c28524a5eec65d73027d85f0faa"
+    },
+    {
+      "path": "assets/provenance/comfy-executed.api.json",
+      "original_recorded_path": "D:\\新建文件夹 (2)\\AlexNet\\output\\comfy-learning-core-20261023\\attempt-1.api.json",
+      "role": "Actually executed API workflow",
+      "bytes": 1998,
+      "sha256": "9c8d318d91c0d63508a319a11a2c1711138fb47280bb9e79993bad82679b14ac"
+    }
+  ],
+  "record_hashes": {
+    "assets/models/engineering-manifest.json": "66a3dd3314601c6372c8d7f30c750a30f7821230ef659f440e89b6e85761942a",
+    "assets/models/comfy-provenance.json": "8ca71a2fe22e38724a77fe072d8ee6c9f8e49a64e15ab1e11d4ac028bad8ab9d"
+  },
+  "repository_files": [
+    "assets/models/engineering-manifest.json",
+    "assets/models/comfy-provenance.json",
+    "assets/models/compute-system.glb",
+    "assets/models/accelerator.glb",
+    "assets/models/learning-sculpture.glb",
+    "assets/models/ai-museum-engineering-v002.blend"
+  ]
+}
