@@ -82,6 +82,6 @@ npm run build
 
 ## Git 与许可
 
-在 `feature/curated-history` 分支持续管理源码、离线产物、资产、测试和文档。依赖、临时日志、验证截图和交付压缩包不入库。未配置远程仓库，未上传。
+在 `feature/curated-history` 分支持续管理源码、离线产物、资产、测试和文档。依赖、临时日志、验证截图和交付压缩包不入库。当前已配置 `origin` 为 `pandehong123-ux/AlexNet-Web3D`；本轮只创建本地提交，未推送。
 
 Three.js 许可见 `assets/THREE-LICENSE.txt`；ComfyUI 所用本地模型信息和生成来源见 provenance，后续分发请保留模型适用许可。
