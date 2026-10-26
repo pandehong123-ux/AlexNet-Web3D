@@ -80,11 +80,18 @@ export function createMuseumScene(onPick){
   stageObject=box(scene,isHistorical?[12,.12,8]:[24,.12,13],[0,isHistorical?-2.2:-2.75,0],0x202323);ms.delete(stageObject.material);stageObject.material.dispose();stageObject.material=new T.MeshBasicMaterial({color:0x181c1d});ms.add(stageObject.material);
   if(imported){
    const originals=new Set();
+   const partKeys=new Set(PART_CATALOG[mode].map(row=>row.key));
+   const adopt=(object,key=null)=>{scene.add(object);object.traverse(child=>{if(!child.isMesh)return;if(key)child.userData.key=key;child.castShadow=true;child.receiveShadow=true;gs.add(child.geometry);const materials=[].concat(child.material).map(material=>{originals.add(material);const clone=material.clone();clone.envMapIntensity=.65;ms.add(clone);return clone;});child.material=Array.isArray(child.material)?materials:materials[0];});};
    for(const row of PART_CATALOG[mode]){
     const group=imported.children.find(child=>child.userData.key===row.key);if(!group)throw new Error('Missing engineering part: '+row.key);
-    scene.add(group);group.traverse(object=>{if(!object.isMesh)return;object.userData.key=row.key;object.castShadow=true;object.receiveShadow=true;gs.add(object.geometry);const materials=[].concat(object.material).map(material=>{originals.add(material);const clone=material.clone();clone.envMapIntensity=.65;ms.add(clone);return clone;});object.material=Array.isArray(object.material)?materials:materials[0];});
+    adopt(group,row.key);
     if(row.key==='board')boardGroup=group;else parts.push(group);
    }
+   // History GLBs also contain signal buses and explanatory paths that are
+   // deliberately independent of a single part. Keep them in the scene so
+   // they remain visible in the assembled view and can be hidden during an
+   // isolated-part inspection.
+   imported.children.filter(child=>!partKeys.has(child.userData.key)).forEach(child=>adopt(child));
    originals.forEach(material=>material.dispose());
    camera.position.set(...(mode==='match'?[12,10,18]:[9,8,12]));controls.target.set(0,0,0);
   }else if(mode==='training')buildTraining();else if(['neuron','rules','search','learning'].includes(mode))historical=buildHistoricalModel(mode,{scene,component,box,sphere,cylinder,line,wire,detailBoard,mat,gs,camera,controls});else buildSelf();

@@ -47,6 +47,11 @@
 | assets/models/live-manifest.json | 动画轨道、轴心、源文件哈希及渲染验收记录。 |
 | assets/provenance/engineering-task-only.blend | 仅含任务场景的最终可编辑归档，不含初始立方体场景。 |
 | assets/models/learning-sculpture.glb | 本地混元3D生成并清理、减面、着色的原创抽象雕塑。 |
+| assets/models/ai-museum-history-v001.blend | 00历史主展区四组可编辑 Blender 原理展品源文件。 |
+| assets/models/history-neuron-v001.glb | 00人工神经元展品：框架、加权核心、存储、并行阵列、互联模块。 |
+| assets/models/history-rules-v001.glb | 00规则推理展品：输入、规则单元、匹配、控制、输出与信号总线。 |
+| assets/models/history-search-v001.glb | 00搜索评估展品：局面节点、三条候选分支、评估与回传。 |
+| assets/models/history-learning-v001.glb | 00深度学习展品：样本、前向、损失、梯度、参数更新闭环。 |
 | assets/models/engineering-manifest.json | 几何、节点、文件与源场景验收记录。 |
 | assets/models/comfy-provenance.json | 模型、种子、工作流、输入指纹、执行证据与后处理记录。 |
 
@@ -56,7 +61,7 @@ GLB 由构建器嵌入离线 script.js，在浏览器内存中解析；独立 GL
 
 复用指南见 [三维制作与交互管线](docs/3d-pipeline.md)、[本轮验收](docs/2026-10-23-exhibit-upgrade.md) 和 [ComfyUI 复现说明](tools/comfy/README.md)。
 
-最新的00模型细化与01、03、04运行动画见 [运转动画制作与验收](docs/2026-10-23-operating-exhibits.md)。直接打开首页即可体验；模型画布底部提供“暂停运转 / 继续运转”。03沿用“运行数据流、暂停、单步”控制。所有运转均为教学示意，风扇速度不代表真实硬件转速。
+最新的00 Blender 模型细化见 [00历史展品 Blender 管线](docs/2026-10-26-history-blender-assets.md)；01、03、04运行动画见 [运转动画制作与验收](docs/2026-10-23-operating-exhibits.md)。直接打开首页即可体验；模型画布底部提供“暂停运转 / 继续运转”。03沿用“运行数据流、暂停、单步”控制。所有运转均为教学示意，风扇速度不代表真实硬件转速。
 
 ## 实现边界
 
@@ -75,16 +80,16 @@ npm run build
 主要模块：
 
 - `museum.mjs` / `museum-data.mjs`：内容、展区交互与教学状态。
-- `history-models.mjs`：00四组原创原理装置、曲线信号通路与细分结构。
+- `history-models.mjs`：00展品的程序化回退模型；正常构建优先加载 Blender 导出的四组 GLB。
 - `exhibit-motion.mjs`：01/04动画播放器、历史装置运转、局部信号与受控时间。
 - `museum-scene.mjs` / `exhibit-layout.mjs`：三维选择、相机、拆解与部件布局。
-- `engineering-models.mjs`：内存 GLB 解析与资源释放。
+- `engineering-models.mjs`：内存 GLB 解析、历史展品部件归一化与资源释放。
 - `museum-walk.mjs` / `walk-state.mjs`：大厅、环视、行走碰撞与展台入口。
 - `visitor-experience.mjs`：三角色任务、复盘、地图与分站导览。
 - `app.mjs` / `rendering.mjs`：原神经网络与数据流；`science.mjs` / `labs.mjs`：数值与关卡。
 - `tools/blender/`、`tools/comfy/`：本地制作、导出及可复现生成管线。
 
-`npm test` 覆盖原算法、关卡、角色、布局、资产与行走边界。浏览器脚本为 `tests/engineering-browser.cjs`、`walk-browser.cjs`、`visitor-browser.cjs`，原网络和六关回归为 `browser.cjs`、`navigation-browser.cjs`。这些脚本使用本机 Playwright 绝对路径，换电脑需调整依赖路径。
+`npm test` 覆盖原算法、关卡、角色、布局、历史 Blender GLB 层级、资产与行走边界。浏览器脚本为 `tests/history-browser.cjs`、`tests/engineering-browser.cjs`、`walk-browser.cjs`、`visitor-browser.cjs`，原网络和六关回归为 `browser.cjs`、`navigation-browser.cjs`。这些脚本使用本机 Playwright 绝对路径，换电脑需调整依赖路径。
 
 新增 `tests/live-exhibits-browser.cjs` 检查风扇、静态外框、暂停、局部聚焦、后台停转和减少动态效果；`tests/live-model-assets.test.mjs` 直接解析交付GLB，验证部件重挂之后的真实动画。动画接触表与最小验收证据已归档到 `assets/provenance/live/`，可随Git迁移。
 
