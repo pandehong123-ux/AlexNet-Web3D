@@ -3,7 +3,7 @@ import * as T from 'three';
 // Original explanatory instruments: no claim to reproduce historical hardware.
 export function buildHistoricalModel(mode, ctx) {
   const {scene,component,box,sphere,cylinder,line,wire,detailBoard,mat,gs,camera,controls}=ctx;
-  const ink=0x253738, steel=0x819593, mint=0xa2c8bb, brass=0xb9a580, lilac=0xa59bb7;
+  const ink=0x10273b, steel=0x2c8f97, mint=0x4fd8c5, brass=0xe0a848, lilac=0x9d76df;
   const paths=[],rotors=[],scanners=[];
   const tube=(parent,points,col=steel,r=.035)=>{
     const curve=new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p)));
@@ -15,7 +15,7 @@ export function buildHistoricalModel(mode, ctx) {
     const geo=new T.TorusGeometry(r,.028,6,48);gs.add(geo);const mesh=new T.Mesh(geo,mat(col));
     mesh.position.set(...pos);if(!vertical)mesh.rotation.x=Math.PI/2;parent.add(mesh);return mesh;
   };
-  const glass=(parent,size,pos)=>{const mesh=box(parent,size,pos,0xabc4c0);mesh.material.transparent=true;mesh.material.opacity=.12;mesh.material.depthWrite=false;mesh.material.metalness=.08;mesh.material.roughness=.18;return mesh;};
+  const glass=(parent,size,pos)=>{const mesh=box(parent,size,pos,0x3aa9b0);mesh.material.transparent=true;mesh.material.opacity=.19;mesh.material.depthWrite=false;mesh.material.metalness=.08;mesh.material.roughness=.18;mesh.material.emissive.set(0x1a7f8d);mesh.material.emissiveIntensity=.2;return mesh;};
   const stand=(parent,x,z,h=.7)=>{cylinder(parent,.16,.1,[x,-1.55,z],brass);cylinder(parent,.055,h,[x,-1.5+h/2,z],steel);};
   component('shell',0,g=>{
     box(g,[9.1,.24,6],[0,-1.8,0],ink);box(g,[8.8,.065,5.7],[0,-1.64,0],0x45534f);detailBoard(g,8.7,5.5,-1.58);

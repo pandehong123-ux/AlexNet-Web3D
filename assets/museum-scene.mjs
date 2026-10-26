@@ -17,7 +17,7 @@ export function createMuseumScene(onPick){
  const projected=new T.Vector3();
  let renderer,scene,camera,controls,container,mode='match',parts=[],rings=[],pulse=[],boardGroup,frame=0,last=0,active=false,spread=0,targetSpread=0;const ray=new T.Raycaster(),pointer=new T.Vector2();
  const colors={shell:0x596066,cpu:0xc1c6c2,gpu:0x8faaa1,memory:0xaba4b6,network:0xc4ae87};const gs=new Set(),ms=new Set();
- const mat=(c,extra={})=>{const m=new T.MeshStandardMaterial({color:c,roughness:.36,metalness:.62,envMapIntensity:.42,...extra});ms.add(m);return m;};
+ const mat=(c,extra={})=>{const base=new T.Color(c);const m=new T.MeshStandardMaterial({color:base,emissive:base.clone().multiplyScalar(.055),emissiveIntensity:.18,roughness:.3,metalness:.4,envMapIntensity:.5,...extra});ms.add(m);return m;};
  function box(parent,size,pos,color,key=null){const geo=new RoundedBoxGeometry(...size,2,Math.min(.07,Math.min(...size)*.16));gs.add(geo);const m=new T.Mesh(geo,mat(color));m.position.set(...pos);m.castShadow=true;m.receiveShadow=true;parent.add(m);if(key)m.userData.key=key;return m;}
  function wire(parent,size,pos,col){const geo=new T.EdgesGeometry(new T.BoxGeometry(...size));gs.add(geo);const m=new T.LineBasicMaterial({color:col,transparent:true,opacity:.5});ms.add(m);const o=new T.LineSegments(geo,m);o.position.set(...pos);parent.add(o);return o;}
  function line(parent,a,b,col){const geo=new T.BufferGeometry().setFromPoints([new T.Vector3(...a),new T.Vector3(...b)]);gs.add(geo);const m=new T.LineBasicMaterial({color:col,transparent:true,opacity:.45});ms.add(m);const o=new T.Line(geo,m);parent.add(o);return o;}
@@ -49,7 +49,7 @@ export function createMuseumScene(onPick){
  function screw(parent,pos){const o=cylinder(parent,.047,.035,pos,0xb2b5af,'shell');line(parent,[pos[0]-.025,pos[1]+.019,pos[2]],[pos[0]+.025,pos[1]+.019,pos[2]],0x303638);return o;}
  function trace(parent,a,b,col=0x788f8b){line(parent,a,[b[0],a[1],a[2]],col);line(parent,[b[0],a[1],a[2]],b,col);}
  function detailBoard(parent,w,d,y){for(const x of [-w/2+.18,w/2-.18])for(const z of [-d/2+.18,d/2-.18])screw(parent,[x,y+.05,z]);for(let i=0;i<16;i++){const x=(i-7.5)*w/20;trace(parent,[x,y+.02,-d*.38],[x*.8,y+.02,d*.35],i%3?0x617b70:0xb8a783);}for(let i=0;i<12;i++){const x=(i%6-2.5)*w/7,z=i<6?-d*.32:d*.32;box(parent,[.12,.07,.17],[x,y+.04,z],0x353b3d);}}
- function init(){renderer=new T.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setClearColor(0x111314);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;scene=new T.Scene();scene.background=new T.Color(0x111314);const pm=new T.PMREMGenerator(renderer),room=new RoomEnvironment();environment=pm.fromScene(room,.06);scene.environment=environment.texture;pm.dispose();room.dispose();camera=new T.PerspectiveCamera(36,1,.1,150);controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=false;controls.minDistance=6;controls.maxDistance=35;controls.maxPolarAngle=Math.PI*.48;
+ function init(){renderer=new T.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setClearColor(0x111314);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;scene=new T.Scene();scene.background=new T.Color(0x111314);const pm=new T.PMREMGenerator(renderer),room=new RoomEnvironment();environment=pm.fromScene(room,.06);scene.environment=environment.texture;pm.dispose();room.dispose();camera=new T.PerspectiveCamera(36,1,.1,180);controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=true;controls.screenSpacePanning=true;controls.minDistance=2.2;controls.maxDistance=120;controls.minPolarAngle=.08;controls.maxPolarAngle=Math.PI-.08;
  renderer.domElement.setAttribute('aria-label','三维原理展品，拖动旋转、滚轮缩放；可用下方部件按钮选择');
  const hitAt=e=>{if(container?.dataset.modelReady!=='true')return null;const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(pointer,camera);for(const hit of ray.intersectObjects(scene.children,true)){if(!hit.object.isMesh)continue;let o=hit.object,owner=null,visible=true;while(o&&o!==scene){if(!o.visible)visible=false;if(parts.includes(o)||o===boardGroup)owner=o;o=o.parent;}if(!visible)continue;if(owner)return owner.userData.key;if(hit.object.userData.key)return hit.object.userData.key;}return null;};
  renderer.domElement.addEventListener('pointerdown',e=>down=e.isPrimary&&e.button===0?[e.clientX,e.clientY]:null);
@@ -111,7 +111,7 @@ export function createMuseumScene(onPick){
   controls.update();
   spread=reduced||Math.abs(spread-targetSpread)<.001?targetSpread:T.MathUtils.damp(spread,targetSpread,4,delta);
   if(PART_CATALOG[mode]){
-   layoutController.update(camera,controls.target,spread,isolatedKey);
+   layoutController.update(camera,controls.target,spread,isolatedKey,true);
    if(fitView){
     const desired=targetSpread||isolatedKey?layoutController.distance(camera,isolatedKey):homePosition.distanceTo(homeTarget);
     const current=camera.position.distanceTo(controls.target);
@@ -120,7 +120,7 @@ export function createMuseumScene(onPick){
     camera.position.copy(controls.target).addScaledVector(cameraDirection,distance);camera.updateMatrixWorld();
     if(Math.abs(distance-desired)<.02)fitView=false;
    }
-   layoutController.update(camera,controls.target,spread,isolatedKey);
+   layoutController.update(camera,controls.target,spread,isolatedKey,true);
   }else parts.forEach(part=>part.position.copy(part.userData.base).addScaledVector(part.userData.offset,spread));
   if(stageObject)stageObject.visible=spread<.02&&!isolatedKey;
   if(PART_CATALOG[mode])auxiliary.forEach(object=>object.visible=spread<.02&&!isolatedKey);
@@ -130,7 +130,7 @@ export function createMuseumScene(onPick){
   updateHotspots();renderer.render(scene,camera);
  }
  function syncZoom(){camera.zoom=(container.clientWidth<600&&!targetSpread&&!isolatedKey) ? .7 : 1;camera.updateProjectionMatrix();}
- function resetView(){if(!camera||!parts.length)return;isolatedKey=null;controls.target.copy(homeTarget);cameraDirection.copy(homePosition).sub(homeTarget).normalize();camera.position.copy(controls.target).addScaledVector(cameraDirection,camera.position.distanceTo(controls.target));syncZoom();fitView=true;controls.update();}
+ function resetView(){if(!camera||!parts.length)return;isolatedKey=null;layoutController.resetBasis();controls.target.copy(homeTarget);cameraDirection.copy(homePosition).sub(homeTarget).normalize();camera.position.copy(controls.target).addScaledVector(cameraDirection,camera.position.distanceTo(controls.target));syncZoom();fitView=true;controls.update();}
  return {
   async show(host,newMode='match'){
    const generation=++loadingGeneration;
@@ -148,7 +148,7 @@ export function createMuseumScene(onPick){
   },
   hide(){loadingGeneration++;active=false;resizeObserver.disconnect();},
   select:selectPart,
-  explode(){if(!active||container?.dataset.modelReady!=='true')return false;isolatedKey=null;targetSpread=targetSpread?0:1;container.dataset.expanded=String(!!targetSpread);syncZoom();fitView=true;return targetSpread===1;},
+  explode(){if(!active||container?.dataset.modelReady!=='true')return false;isolatedKey=null;layoutController.resetBasis();targetSpread=targetSpread?0:1;container.dataset.expanded=String(!!targetSpread);syncZoom();fitView=true;return targetSpread===1;},
   isolate(){if(!selectedKey){const key=PART_CATALOG[mode]?.[0]?.key;if(key)selectPart(key);}if(!selectedKey||!active||container?.dataset.modelReady!=='true')return false;isolatedKey=isolatedKey?null:selectedKey;syncZoom();fitView=true;return !!isolatedKey;},
   resetView,
   dispose(){loadingGeneration++;cancelAnimationFrame(frame);resizeObserver.disconnect();clear();controls?.dispose();environment?.dispose();renderer?.dispose();}
