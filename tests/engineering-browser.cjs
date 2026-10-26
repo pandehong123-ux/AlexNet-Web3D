@@ -46,6 +46,10 @@ const fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('n
     if(await page.locator('#'+prefix+'-info').getAttribute('data-part')===geometryBounds.key){picked=true;break;}
    }if(picked)break;}
    check(mode+'真实网格点击联动说明',picked);
+   await page.waitForTimeout(500);
+   const directSnapshot=await snapshot(host);
+   check(mode+'真实网格点击进入单件检视',directSnapshot.isolated===geometryBounds.key&&directSnapshot.bounds.length===1);
+   if(await page.locator('#'+prefix+'-isolate').getAttribute('aria-pressed')==='true')await page.locator('#'+prefix+'-isolate').click();
    await page.locator('#'+host+' .part-hotspots').evaluate(el=>el.style.visibility='');
    const canvas=page.locator('#'+host+' canvas');await canvas.scrollIntoViewIfNeeded();
    let r=await canvas.boundingBox();await page.mouse.move(r.x+r.width*.5,r.y+r.height*.5);await page.mouse.down();await page.mouse.move(r.x+r.width*.7,r.y+r.height*.65,{steps:12});await page.mouse.up();
