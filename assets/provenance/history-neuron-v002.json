@@ -1,0 +1,10 @@
+{
+  "asset": "history-neuron-v002",
+  "title": "神经元计算硬件 / 原创解释性装置",
+  "license": "Original project geometry; no third-party meshes or textures used",
+  "source": "tools/blender/build_history_neuron_v002.py",
+  "blender": "5.2.2 LTS",
+  "method": "Individual manufactured parts: machined frame, PCB substrates, routed traces, plated vias, solder joints, integrated-circuit packages, DIMMs, VRMs, heatpipes, fins, fan rotors, ports and signal cabling.",
+  "accuracy": "Original explanatory instrument; not a replica of historical hardware and not a working neural-network inference device.",
+  "reference_policy": "The user-provided automobile model was used only as a quality reference and was not copied, imported or redistributed."
+}

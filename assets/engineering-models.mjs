@@ -1,10 +1,10 @@
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import computeSystem from './models/compute-system-live.glb';
 import accelerator from './models/accelerator-live.glb';
-import historyNeuron from './models/history-neuron-v001.glb';
-import historyRules from './models/history-rules-v001.glb';
-import historySearch from './models/history-search-v001.glb';
-import historyLearning from './models/history-learning-v001.glb';
+import historyNeuron from './models/history-neuron-v003.glb';
+import historyRules from './models/history-rules-v003.glb';
+import historySearch from './models/history-search-v003.glb';
+import historyLearning from './models/history-learning-v003.glb';
 
 const buffers = {
   match: computeSystem,
@@ -42,6 +42,10 @@ export async function loadEngineeringModel(mode) {
       const group = root.children.find(child => child.userData?.key === key || child.name.toLowerCase().endsWith(`-${key.toLowerCase()}`));
       if (group) group.userData.key = key;
     }
+    root.userData.rotors = [];
+    root.traverse(object => {
+      if (object.userData?.motion === 'rotor') root.userData.rotors.push(object);
+    });
   }
   root.animations = result.animations;
   return root;

@@ -14,7 +14,7 @@ test('each exhibit has unique, meaningful component explanations',()=>{
   }
   assert.equal(partDetail('gpu','missing'),'');
   assert.equal(partDetail('neuron','missing'),'');
-  assert.ok(partDetail('neuron','cpu').includes('加权计算核心'));
+  assert.ok(partDetail('neuron','cpu').includes('细胞体与细胞核'));
 });
 test('each growth mode has its own full learning path',()=>{
   for(const [mode,g] of Object.entries(GROWTH_GUIDES)){
